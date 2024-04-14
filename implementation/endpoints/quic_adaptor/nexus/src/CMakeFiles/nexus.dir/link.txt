@@ -1,0 +1,2 @@
+/usr/bin/ar qc libnexus.a CMakeFiles/nexus.dir/client.cc.o CMakeFiles/nexus.dir/connection.cc.o CMakeFiles/nexus.dir/connection_state.cc.o CMakeFiles/nexus.dir/engine.cc.o CMakeFiles/nexus.dir/error.cc.o CMakeFiles/nexus.dir/global.cc.o CMakeFiles/nexus.dir/server.cc.o CMakeFiles/nexus.dir/settings.cc.o CMakeFiles/nexus.dir/socket.cc.o CMakeFiles/nexus.dir/stream.cc.o CMakeFiles/nexus.dir/stream_state.cc.o
+/usr/bin/ranlib libnexus.a

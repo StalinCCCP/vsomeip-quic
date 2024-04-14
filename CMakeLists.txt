@@ -76,7 +76,7 @@ endif()
   if(NOT DEFINED _FORTIFY_SOURCE)
       set(_FORTIFY_SOURCE 2)
   endif()
-    set(OS_CXX_FLAGS "${OS_CXX_FLAGS} -D_GLIBCXX_USE_NANOSLEEP -pthread -O -Wall -Wextra -Wformat -Wformat-security -Wconversion -fexceptions -fstrict-aliasing -fstack-protector-strong -fasynchronous-unwind-tables -fno-omit-frame-pointer -D_FORTIFY_SOURCE=${_FORTIFY_SOURCE} -Wformat -Wformat-security -Wpedantic -Werror -fPIE")
+    set(OS_CXX_FLAGS "${OS_CXX_FLAGS} -D_GLIBCXX_USE_NANOSLEEP -pthread -O -Wall -Wextra -Wformat -Wformat-security -Wconversion -fexceptions -fstrict-aliasing -fstack-protector-strong -fasynchronous-unwind-tables -fno-omit-frame-pointer -D_FORTIFY_SOURCE=${_FORTIFY_SOURCE} -Wformat -Wformat-security -Wpedantic -fPIE")
 
     # force all use of std::mutex and std::recursive_mutex to use runtime init
     # instead of static initialization so mutexes can be hooked to enable PI as needed
@@ -254,7 +254,7 @@ if (MSVC)
 elseif(${CMAKE_SYSTEM_NAME} MATCHES "QNX")
     set(USE_RT "")
 else()
-    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OS_CXX_FLAGS} -g ${OPTIMIZE} -std=c++14 ${NO_DEPRECATED} ${EXPORTSYMBOLS}")
+    set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${OS_CXX_FLAGS} -g ${OPTIMIZE} -std=c++20 ${NO_DEPRECATED} ${EXPORTSYMBOLS}")
     set(USE_RT "rt")
 endif()
 
@@ -279,7 +279,10 @@ endif ()
 # Base library
 ################################################################################
 file(GLOB ${VSOMEIP_NAME}_SRC
+    "implementation/endpoints/quic_adaptor/nexus/src/*.cc"
     "implementation/endpoints/src/*.cpp"
+    #add quic support
+    
     "implementation/logger/src/*.cpp"
     "implementation/tracing/src/*.cpp"
     "implementation/message/src/*.cpp"
@@ -311,12 +314,31 @@ target_include_directories(${VSOMEIP_NAME} INTERFACE
     $<BUILD_INTERFACE:${PROJECT_SOURCE_DIR}/interface>
     $<BUILD_INTERFACE:${PROJECT_BINARY_DIR}>
     $<INSTALL_INTERFACE:${INSTALL_INCLUDE_DIR}>)
+
+#only built locally
+#set(BORINGSSL_INCLUDE /home/haswell/Projects/nexus/dependency/boringssl/include)
+# set_property(TARGET ${VSOMEIP_NAME} PROPERTY POSITION_INDEPENDENT_CODE ON)
+
 # PRIVATE means the listed libraries won't be included in the "link interface",
 # meaning the exported ${VSOMEIP_NAME}Targets.cmake targets won't try to link against
 # them (which shouldn't be required). ${Boost_LIBRARIES} includes absolute
 # build host paths as of writing, which also makes this important as it breaks
 # the build.
-target_link_libraries(${VSOMEIP_NAME} PRIVATE ${Boost_LIBRARIES} ${USE_RT} ${DL_LIBRARY} ${DLT_LIBRARIES} ${SystemD_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+find_package(lsquic REQUIRED)
+#built_locally
+find_package(OpenSSL REQUIRED HINTS "/home/haswell/Projects/boringssl/install")
+target_include_directories(${VSOMEIP_NAME} PRIVATE /home/haswell/Projects/boringssl/install/include
+                            /usr/local/include/lsquic/)
+target_link_libraries(${VSOMEIP_NAME} PRIVATE 
+            ${Boost_LIBRARIES} 
+            ${USE_RT} 
+            ${DL_LIBRARY} 
+            ${DLT_LIBRARIES} 
+            ${SystemD_LIBRARIES} 
+            ${CMAKE_THREAD_LIBS_INIT}
+            lsquic
+            
+            )
 
 if(NOT WIN32)
     target_link_options(${VSOMEIP_NAME} PRIVATE "LINKER:-as-needed")
@@ -352,6 +374,7 @@ set_target_properties (${VSOMEIP_NAME}-e2e PROPERTIES VERSION ${VSOMEIP_VERSION}
 if (MSVC)
     set_target_properties(${VSOMEIP_NAME}-e2e PROPERTIES COMPILE_DEFINITIONS "VSOMEIP_DLL_COMPILATION_PLUGIN")
 endif ()
+#only built locally
 
 target_link_libraries(${VSOMEIP_NAME}-e2e ${VSOMEIP_NAME} ${Boost_LIBRARIES} ${USE_RT} ${DL_LIBRARY} ${SystemD_LIBRARIES})
 
@@ -671,3 +694,4 @@ if (${CMAKE_SYSTEM_NAME} MATCHES "QNX")
     install(FILES ${PROJECT_BINARY_DIR}/examples/routingmanagerd/routingmanagerd
         DESTINATION bin/vsomeip_tests/examples/routingmanagerd)
 endif()
+

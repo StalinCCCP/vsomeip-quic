@@ -21,7 +21,7 @@
 #include "../include/endpoint_host.hpp"
 #include "../../utility/include/utility.hpp"
 #include "../../utility/include/byteorder.hpp"
-
+#include "../quic_adaptor/quic_adaptor.hpp"
 namespace vsomeip_v3 {
 
 template<typename Protocol>
@@ -874,5 +874,6 @@ template class client_endpoint_impl<boost::asio::local::stream_protocol>;
 #endif
 template class client_endpoint_impl<boost::asio::ip::tcp>;
 template class client_endpoint_impl<boost::asio::ip::udp>;
+template class client_endpoint_impl<quic_adaptor::quic_client_adaptor>;
 
 }  // namespace vsomeip_v3

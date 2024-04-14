@@ -18,6 +18,7 @@
 #include "../include/endpoint_host.hpp"
 #include "../../routing/include/routing_host.hpp"
 #include "../include/endpoint_impl.hpp"
+#include "../quic_adaptor/quic_adaptor.hpp"
 
 namespace vsomeip_v3 {
 
@@ -158,7 +159,7 @@ template class endpoint_impl<boost::asio::local::stream_protocol>;
 
 template class endpoint_impl<boost::asio::ip::tcp>;
 template class endpoint_impl<boost::asio::ip::udp>;
-
+template class endpoint_impl<quic_adaptor::quic_client_adaptor>;
 #if VSOMEIP_BOOST_VERSION < 106600
 template class endpoint_impl<boost::asio::ip::udp_ext>;
 #endif
