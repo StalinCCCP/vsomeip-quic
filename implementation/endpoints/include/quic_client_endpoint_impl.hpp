@@ -14,6 +14,8 @@
 #include <boost/asio/ssl/context.hpp>
 #include <nexus/global_init.hpp>
 
+#include <nexus/quic/client.hpp>
+#include <nexus/quic/connection.hpp>
 #include <vsomeip/defines.hpp>
 #include "../quic_adaptor/quic_adaptor.hpp"
 #include "client_endpoint_impl.hpp"
@@ -83,6 +85,8 @@ private:
     std::chrono::steady_clock::time_point last_sent_;
     static nexus::global::context global;
     boost::asio::ssl::context ssl;
+    nexus::quic::client quic_client;
+    nexus::quic::connection quic_connection;
 };
 
 } // namespace vsomeip_v3

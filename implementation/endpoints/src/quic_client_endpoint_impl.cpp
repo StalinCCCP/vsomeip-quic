@@ -36,7 +36,7 @@ quic_client_endpoint_impl::quic_client_endpoint_impl(
       quic_receive_buffer_size_(_configuration->get_udp_receive_buffer_size()),
       tp_reassembler_(std::make_shared<tp::tp_reassembler>(
               _configuration->get_max_message_size_unreliable(), _io)),
-      ssl(boost::asio::ssl::context::tlsv13)
+      ssl(boost::asio::ssl::context::tlsv13),
              {
     is_supporting_someip_tp_ = true;
     SSL_CTX_set_min_proto_version(ssl.native_handle(), TLS1_3_VERSION);
