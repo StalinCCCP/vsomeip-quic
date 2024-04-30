@@ -1,5 +1,5 @@
 CMakeFiles/service-example.dir/service-example.cpp.o: \
- /home/haswell/Projects/vsomeip-master/usertest/service-example.cpp \
+ /home/haswell/Projects/vsomeip-quic/usertest/service-example.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iomanip \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -155,13 +155,13 @@ CMakeFiles/service-example.dir/service-example.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/sstream \
  /usr/include/c++/11/bits/sstream.tcc \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/vsomeip.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/constants.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/primitive_types.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/enumeration_types.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/defines.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/vsomeip.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/constants.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/primitive_types.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/enumeration_types.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/defines.hpp \
  /usr/include/c++/11/cstddef \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/application.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/application.hpp \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/limits /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
@@ -186,17 +186,17 @@ CMakeFiles/service-example.dir/service-example.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/deprecated.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/structured_types.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/function_types.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/deprecated.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/structured_types.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/function_types.hpp \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/handler.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/vsomeip_sec.h \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/message.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/message_base.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/export.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/internal/deserializable.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/internal/serializable.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/payload.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/runtime.hpp \
- /home/haswell/Projects/vsomeip-master/interface/vsomeip/trace.hpp
+ /home/haswell/Projects/vsomeip/interface/vsomeip/handler.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/vsomeip_sec.h \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/message.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/message_base.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/export.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/internal/deserializable.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/internal/serializable.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/payload.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/runtime.hpp \
+ /home/haswell/Projects/vsomeip/interface/vsomeip/trace.hpp

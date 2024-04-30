@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haswell/Projects/vsomeip-master/usertest
+CMAKE_SOURCE_DIR = /home/haswell/Projects/vsomeip-quic/usertest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haswell/Projects/vsomeip-master/usertest/build
+CMAKE_BINARY_DIR = /home/haswell/Projects/vsomeip-quic/usertest/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles /home/haswell/Projects/vsomeip-master/usertest/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles /home/haswell/Projects/vsomeip-quic/usertest/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -142,6 +142,19 @@ client-example/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/build
 .PHONY : client-example/fast
 
+#=============================================================================
+# Target rules for targets named quic-client-example
+
+# Build rule for target.
+quic-client-example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quic-client-example
+.PHONY : quic-client-example
+
+# fast build rule for target.
+quic-client-example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/build
+.PHONY : quic-client-example/fast
+
 client-example.o: client-example.cpp.o
 .PHONY : client-example.o
 
@@ -165,6 +178,30 @@ client-example.s: client-example.cpp.s
 client-example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/client-example.cpp.s
 .PHONY : client-example.cpp.s
+
+quic-client-example.o: quic-client-example.cpp.o
+.PHONY : quic-client-example.o
+
+# target to build an object file
+quic-client-example.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/quic-client-example.cpp.o
+.PHONY : quic-client-example.cpp.o
+
+quic-client-example.i: quic-client-example.cpp.i
+.PHONY : quic-client-example.i
+
+# target to preprocess a source file
+quic-client-example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/quic-client-example.cpp.i
+.PHONY : quic-client-example.cpp.i
+
+quic-client-example.s: quic-client-example.cpp.s
+.PHONY : quic-client-example.s
+
+# target to generate assembly for a file
+quic-client-example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/quic-client-example.cpp.s
+.PHONY : quic-client-example.cpp.s
 
 service-example.o: service-example.cpp.o
 .PHONY : service-example.o
@@ -199,10 +236,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client-example"
+	@echo "... quic-client-example"
 	@echo "... service-example"
 	@echo "... client-example.o"
 	@echo "... client-example.i"
 	@echo "... client-example.s"
+	@echo "... quic-client-example.o"
+	@echo "... quic-client-example.i"
+	@echo "... quic-client-example.s"
 	@echo "... service-example.o"
 	@echo "... service-example.i"
 	@echo "... service-example.s"

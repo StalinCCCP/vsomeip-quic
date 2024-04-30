@@ -11,9 +11,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
-  "/home/haswell/Projects/vsomeip-master/vsomeip3Config.cmake"
-  "/home/haswell/Projects/vsomeip-master/vsomeip3ConfigVersion.cmake"
-  "/home/haswell/Projects/vsomeip-master/vsomeip3Targets.cmake"
+  "/home/haswell/Projects/vsomeip/build/vsomeip3Config.cmake"
+  "/home/haswell/Projects/vsomeip/build/vsomeip3ConfigVersion.cmake"
+  "/home/haswell/Projects/vsomeip/build/vsomeip3Targets.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfigVersion.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/BoostDetectToolset-1.74.0.cmake"
@@ -90,4 +90,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/service-example.dir/DependInfo.cmake"
   "CMakeFiles/client-example.dir/DependInfo.cmake"
+  "CMakeFiles/quic-client-example.dir/DependInfo.cmake"
   )

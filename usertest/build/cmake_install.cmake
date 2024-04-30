@@ -1,8 +1,8 @@
-# Install script for directory: /home/haswell/Projects/vsomeip-master/usertest
+# Install script for directory: /home/haswell/Projects/vsomeip-quic/usertest
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/haswell/Projects/install_folder")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/haswell/Projects/vsomeip-master/usertest/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/haswell/Projects/vsomeip-quic/usertest/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

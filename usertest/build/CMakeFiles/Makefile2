@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/haswell/Projects/vsomeip-master/usertest
+CMAKE_SOURCE_DIR = /home/haswell/Projects/vsomeip-quic/usertest
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/haswell/Projects/vsomeip-master/usertest/build
+CMAKE_BINARY_DIR = /home/haswell/Projects/vsomeip-quic/usertest/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = /home/haswell/Projects/vsomeip-master/usertest/build
 # The main recursive "all" target.
 all: CMakeFiles/service-example.dir/all
 all: CMakeFiles/client-example.dir/all
+all: CMakeFiles/quic-client-example.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -74,6 +75,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/service-example.dir/clean
 clean: CMakeFiles/client-example.dir/clean
+clean: CMakeFiles/quic-client-example.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -83,14 +85,14 @@ clean: CMakeFiles/client-example.dir/clean
 CMakeFiles/service-example.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/service-example.dir/build.make CMakeFiles/service-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/service-example.dir/build.make CMakeFiles/service-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles --progress-num=3,4 "Built target service-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles --progress-num=5,6 "Built target service-example"
 .PHONY : CMakeFiles/service-example.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/service-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/service-example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 0
 .PHONY : CMakeFiles/service-example.dir/rule
 
 # Convenience name for target.
@@ -109,14 +111,14 @@ CMakeFiles/service-example.dir/clean:
 CMakeFiles/client-example.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles --progress-num=1,2 "Built target client-example"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles --progress-num=1,2 "Built target client-example"
 .PHONY : CMakeFiles/client-example.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/client-example.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/client-example.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-master/usertest/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 0
 .PHONY : CMakeFiles/client-example.dir/rule
 
 # Convenience name for target.
@@ -127,6 +129,32 @@ client-example: CMakeFiles/client-example.dir/rule
 CMakeFiles/client-example.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/clean
 .PHONY : CMakeFiles/client-example.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/quic-client-example.dir
+
+# All Build rule for target.
+CMakeFiles/quic-client-example.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles --progress-num=3,4 "Built target quic-client-example"
+.PHONY : CMakeFiles/quic-client-example.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/quic-client-example.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/quic-client-example.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles 0
+.PHONY : CMakeFiles/quic-client-example.dir/rule
+
+# Convenience name for target.
+quic-client-example: CMakeFiles/quic-client-example.dir/rule
+.PHONY : quic-client-example
+
+# clean rule for target.
+CMakeFiles/quic-client-example.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/clean
+.PHONY : CMakeFiles/quic-client-example.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

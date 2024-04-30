@@ -15,3 +15,6 @@ target_link_libraries(service-example vsomeip3 ${Boost_LIBRARIES})
 
 add_executable(client-example client-example.cpp)
 target_link_libraries(client-example vsomeip3 ${Boost_LIBRARIES})
+
+add_executable(quic-client-example quic-client-example.cpp)
+target_link_libraries(quic-client-example vsomeip3 ${Boost_LIBRARIES})
