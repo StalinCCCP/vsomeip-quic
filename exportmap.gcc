@@ -17,6 +17,7 @@ global:
         vsomeip_v3::tcp*;
         *vsomeip_v3::udp*;
         vsomeip_v3::udp*;
+        vsomeip_v3::quic*;
         *vsomeip_v3::message_base_impl;
         *vsomeip_v3::message_base_impl::*;
         *vsomeip_v3::message_header_impl;

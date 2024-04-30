@@ -160,6 +160,8 @@ template class endpoint_impl<boost::asio::local::stream_protocol>;
 template class endpoint_impl<boost::asio::ip::tcp>;
 template class endpoint_impl<boost::asio::ip::udp>;
 template class endpoint_impl<quic_adaptor::quic_client_adaptor>;
+template class endpoint_impl<quic_adaptor::quic_server_adaptor>;
+
 #if VSOMEIP_BOOST_VERSION < 106600
 template class endpoint_impl<boost::asio::ip::udp_ext>;
 #endif

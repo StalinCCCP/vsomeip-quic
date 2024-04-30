@@ -19,7 +19,7 @@ class client {
  public:
   /// the polymorphic executor type, boost::asio::any_io_executor
   using executor_type = detail::engine_impl::executor_type;
-
+  
   /// construct the client, taking ownership of a bound UDP socket
   client(udp::socket&& socket, ssl::context& ctx); // TODO: noexcept
 
@@ -51,6 +51,7 @@ class client {
   void close(error_code& ec);
   /// \overload
   void close();
+  udp::socket& local_udp_socket();
 };
 
 } // namespace nexus::quic

@@ -32,6 +32,8 @@ client::client(udp::socket&& socket, ssl::context& ctx, const settings& s)
 {
 }
 
+
+
 client::executor_type client::get_executor() const
 {
   return engine.get_executor();
@@ -41,7 +43,9 @@ udp::endpoint client::local_endpoint() const
 {
   return socket.local_endpoint();
 }
-
+udp::socket& client::local_udp_socket() {
+  return socket.socket;
+}
 void client::connect(connection& conn,
                      const udp::endpoint& endpoint,
                      const char* hostname)
@@ -188,6 +192,7 @@ void client_connection::close()
     throw system_error(ec);
   }
 }
+
 
 } // namespace h3
 } // namespace nexus

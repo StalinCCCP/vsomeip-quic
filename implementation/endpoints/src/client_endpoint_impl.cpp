@@ -466,6 +466,8 @@ void client_endpoint_impl<Protocol>::connect_cbk(
 template<typename Protocol>
 void client_endpoint_impl<Protocol>::cancel_and_connect_cbk(
         boost::system::error_code const &_error) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    VSOMEIP_ERROR<<_error.message();
     std::size_t operations_cancelled;
     {
         /* Need this for TCP endpoints for now because we have no
@@ -875,5 +877,6 @@ template class client_endpoint_impl<boost::asio::local::stream_protocol>;
 template class client_endpoint_impl<boost::asio::ip::tcp>;
 template class client_endpoint_impl<boost::asio::ip::udp>;
 template class client_endpoint_impl<quic_adaptor::quic_client_adaptor>;
+template class client_endpoint_impl<quic_adaptor::quic_server_adaptor>;
 
 }  // namespace vsomeip_v3

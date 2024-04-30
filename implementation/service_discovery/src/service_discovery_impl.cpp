@@ -33,6 +33,7 @@
 #include "../../endpoints/include/endpoint_definition.hpp"
 #include "../../endpoints/include/tcp_server_endpoint_impl.hpp"
 #include "../../endpoints/include/udp_server_endpoint_impl.hpp"
+#include "../../endpoints/include/quic_server_endpoint_impl.hpp"
 #include "../../message/include/serializer.hpp"
 #include "../../plugin/include/plugin_manager_impl.hpp"
 #include "../../routing/include/event.hpp"
@@ -42,7 +43,7 @@
 
 namespace vsomeip_v3 {
 namespace sd {
-
+//class quic_server_endpoint_impl;
 service_discovery_impl::service_discovery_impl(
         service_discovery_host *_host,
         const std::shared_ptr<configuration>& _configuration)

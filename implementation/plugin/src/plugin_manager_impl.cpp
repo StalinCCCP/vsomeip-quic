@@ -123,12 +123,21 @@ std::shared_ptr<plugin> plugin_manager_impl::get_plugin(plugin_type_e _type,
     }
     return load_plugin(_name, _type, 1);
 }
-
+//#define load_debug
 std::shared_ptr<plugin> plugin_manager_impl::load_plugin(const std::string& _library,
         plugin_type_e _type, uint32_t _version) {
+    #ifdef load_debug
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    #endif
     void* handle = load_library(_library);
     plugin_init_func its_init_func = reinterpret_cast<plugin_init_func>(
             load_symbol(handle, VSOMEIP_PLUGIN_INIT_SYMBOL));
+    #ifdef load_debug
+
+    VSOMEIP_DEBUG<<_library;
+    VSOMEIP_DEBUG<<handle;
+    VSOMEIP_DEBUG<<dlerror();
+    #endif
     if (its_init_func) {
         create_plugin_func its_create_func = (*its_init_func)();
         if (its_create_func) {
@@ -178,6 +187,11 @@ void * plugin_manager_impl::load_library(const std::string &_path) {
 #ifdef _WIN32
     return LoadLibrary(_path.c_str());
 #else
+    #ifdef load_debug
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    VSOMEIP_DEBUG<<dlopen;
+    //VSOMEIP_DEBUG<<dlsym;
+    #endif
     return dlopen(_path.c_str(), RTLD_LAZY | RTLD_LOCAL);
 #endif
 }

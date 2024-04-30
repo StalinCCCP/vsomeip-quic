@@ -5,7 +5,7 @@
 
 cmake_minimum_required (VERSION 3.13)
 project (vsomeip)
-
+set (CMAKE_BUILD_RPATH "/home/haswell/Projects/boringssl/ssl/:/home/haswell/Projects/boringssl/crypto/")
 set (VSOMEIP_NAME vsomeip3)
 set (VSOMEIP_COMPAT_NAME vsomeip)
 
@@ -328,7 +328,7 @@ find_package(lsquic REQUIRED)
 #built_locally
 find_package(OpenSSL REQUIRED HINTS "/home/haswell/Projects/boringssl/install")
 target_include_directories(${VSOMEIP_NAME} PRIVATE /home/haswell/Projects/boringssl/install/include
-                            /usr/local/include/lsquic/)
+                            /usr/local/include/lsquic/ /home/haswell/Projects/vsomeip-quic/implementation/endpoints/quic_adaptor/nexus/include)
 target_link_libraries(${VSOMEIP_NAME} PRIVATE 
             ${Boost_LIBRARIES} 
             ${USE_RT} 
@@ -357,8 +357,10 @@ set_target_properties (${VSOMEIP_NAME}-sd PROPERTIES VERSION ${VSOMEIP_VERSION} 
 if (MSVC)
     set_target_properties(${VSOMEIP_NAME}-sd PROPERTIES COMPILE_DEFINITIONS "VSOMEIP_DLL_COMPILATION_PLUGIN")
 endif ()
+target_include_directories(${VSOMEIP_NAME}-sd PRIVATE /home/haswell/Projects/boringssl/install/include
+                            /usr/local/include/lsquic/ /home/haswell/Projects/vsomeip-quic/implementation/endpoints/quic_adaptor/nexus/include)
 
-target_link_libraries(${VSOMEIP_NAME}-sd ${VSOMEIP_NAME} ${Boost_LIBRARIES} ${USE_RT} ${DL_LIBRARY} ${SystemD_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(${VSOMEIP_NAME}-sd ${VSOMEIP_NAME} ${Boost_LIBRARIES} ${USE_RT} ${DL_LIBRARY} ${SystemD_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT} lsquic)
 
 
 ################################################################################
@@ -375,6 +377,8 @@ if (MSVC)
     set_target_properties(${VSOMEIP_NAME}-e2e PROPERTIES COMPILE_DEFINITIONS "VSOMEIP_DLL_COMPILATION_PLUGIN")
 endif ()
 #only built locally
+target_include_directories(${VSOMEIP_NAME}-e2e PRIVATE /home/haswell/Projects/boringssl/install/include
+                            /usr/local/include/lsquic/ /home/haswell/Projects/vsomeip-quic/implementation/endpoints/quic_adaptor/nexus/include)
 
 target_link_libraries(${VSOMEIP_NAME}-e2e ${VSOMEIP_NAME} ${Boost_LIBRARIES} ${USE_RT} ${DL_LIBRARY} ${SystemD_LIBRARIES})
 

@@ -237,6 +237,19 @@ doc/fast:
 .PHONY : doc/fast
 
 #=============================================================================
+# Target rules for targets named doxygen-doc
+
+# Build rule for target.
+doxygen-doc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 doxygen-doc
+.PHONY : doxygen-doc
+
+# fast build rule for target.
+doxygen-doc/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/doxygen-doc.dir/build.make CMakeFiles/doxygen-doc.dir/build
+.PHONY : doxygen-doc/fast
+
+#=============================================================================
 # Target rules for targets named tools
 
 # Build rule for target.
@@ -1395,6 +1408,30 @@ implementation/endpoints/src/quic_client_endpoint_impl.s: implementation/endpoin
 implementation/endpoints/src/quic_client_endpoint_impl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/vsomeip3.dir/build.make CMakeFiles/vsomeip3.dir/implementation/endpoints/src/quic_client_endpoint_impl.cpp.s
 .PHONY : implementation/endpoints/src/quic_client_endpoint_impl.cpp.s
+
+implementation/endpoints/src/quic_server_endpoint_impl.o: implementation/endpoints/src/quic_server_endpoint_impl.cpp.o
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.o
+
+# target to build an object file
+implementation/endpoints/src/quic_server_endpoint_impl.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vsomeip3.dir/build.make CMakeFiles/vsomeip3.dir/implementation/endpoints/src/quic_server_endpoint_impl.cpp.o
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.cpp.o
+
+implementation/endpoints/src/quic_server_endpoint_impl.i: implementation/endpoints/src/quic_server_endpoint_impl.cpp.i
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.i
+
+# target to preprocess a source file
+implementation/endpoints/src/quic_server_endpoint_impl.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vsomeip3.dir/build.make CMakeFiles/vsomeip3.dir/implementation/endpoints/src/quic_server_endpoint_impl.cpp.i
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.cpp.i
+
+implementation/endpoints/src/quic_server_endpoint_impl.s: implementation/endpoints/src/quic_server_endpoint_impl.cpp.s
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.s
+
+# target to generate assembly for a file
+implementation/endpoints/src/quic_server_endpoint_impl.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vsomeip3.dir/build.make CMakeFiles/vsomeip3.dir/implementation/endpoints/src/quic_server_endpoint_impl.cpp.s
+.PHONY : implementation/endpoints/src/quic_server_endpoint_impl.cpp.s
 
 implementation/endpoints/src/server_endpoint_impl.o: implementation/endpoints/src/server_endpoint_impl.cpp.o
 .PHONY : implementation/endpoints/src/server_endpoint_impl.o
@@ -3858,6 +3895,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... doc"
+	@echo "... doxygen-doc"
 	@echo "... examples"
 	@echo "... tools"
 	@echo "... notify-sample"
@@ -4002,6 +4040,9 @@ help:
 	@echo "... implementation/endpoints/src/quic_client_endpoint_impl.o"
 	@echo "... implementation/endpoints/src/quic_client_endpoint_impl.i"
 	@echo "... implementation/endpoints/src/quic_client_endpoint_impl.s"
+	@echo "... implementation/endpoints/src/quic_server_endpoint_impl.o"
+	@echo "... implementation/endpoints/src/quic_server_endpoint_impl.i"
+	@echo "... implementation/endpoints/src/quic_server_endpoint_impl.s"
 	@echo "... implementation/endpoints/src/server_endpoint_impl.o"
 	@echo "... implementation/endpoints/src/server_endpoint_impl.i"
 	@echo "... implementation/endpoints/src/server_endpoint_impl.s"

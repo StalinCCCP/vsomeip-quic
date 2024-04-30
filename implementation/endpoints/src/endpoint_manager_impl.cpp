@@ -5,6 +5,7 @@
 
 #include "../include/endpoint_manager_impl.hpp"
 
+#include <exception>
 #include <vsomeip/internal/logger.hpp>
 
 #include "../include/local_tcp_server_endpoint_impl.hpp"
@@ -15,6 +16,9 @@
 #include "../include/udp_server_endpoint_impl.hpp"
 #include "../include/tcp_client_endpoint_impl.hpp"
 #include "../include/tcp_server_endpoint_impl.hpp"
+#include "../include/quic_server_endpoint_impl.hpp"
+#include "../include/quic_client_endpoint_impl.hpp"
+
 #include "../include/virtual_server_endpoint_impl.hpp"
 #include "../include/endpoint_definition.hpp"
 #include "../../routing/include/routing_manager_base.hpp"
@@ -254,10 +258,10 @@ std::shared_ptr<endpoint> endpoint_manager_impl::create_server_endpoint(
         const std::string its_unicast_str = its_unicast.to_string();
         if (_start) {
             if (_reliable) {
-                its_endpoint = std::make_shared<tcp_server_endpoint_impl>(
+                its_endpoint = std::make_shared<quic_server_endpoint_impl>(
                         shared_from_this(),
                         rm_->shared_from_this(),
-                        boost::asio::ip::tcp::endpoint(its_unicast, _port),
+                        boost::asio::ip::udp::endpoint(its_unicast, _port),
                         io_,
                         configuration_);
                 if (configuration_->has_enabled_magic_cookies(
@@ -404,8 +408,8 @@ endpoint_manager_impl::clear_client_endpoints(
                 its_partition = configuration_->get_partition_id(_service, _instance);
 
                 if (_reliable) {
-                    std::shared_ptr<tcp_client_endpoint_impl> its_tcp_client_endpoint =
-                            std::dynamic_pointer_cast<tcp_client_endpoint_impl>(its_endpoint);
+                    std::shared_ptr<quic_client_endpoint_impl> its_tcp_client_endpoint =
+                            std::dynamic_pointer_cast<quic_client_endpoint_impl>(its_endpoint);
                     if (its_tcp_client_endpoint) {
                         its_local_port = its_tcp_client_endpoint->get_local_port();
                         its_remote_port = its_tcp_client_endpoint->get_remote_port();
@@ -1145,6 +1149,7 @@ std::shared_ptr<endpoint> endpoint_manager_impl::create_remote_client(
     }
     return its_endpoint;
 }
+#define quic_client_test
 
 std::shared_ptr<endpoint> endpoint_manager_impl::create_client_endpoint(
         const boost::asio::ip::address &_address,
@@ -1156,14 +1161,16 @@ std::shared_ptr<endpoint> endpoint_manager_impl::create_client_endpoint(
 
     try {
         if (_reliable) {
-            its_endpoint = std::make_shared<tcp_client_endpoint_impl>(
+            its_endpoint = std::make_shared<quic_client_endpoint_impl>(
                     shared_from_this(),
                     rm_->shared_from_this(),
-                    boost::asio::ip::tcp::endpoint(its_unicast, _local_port),
-                    boost::asio::ip::tcp::endpoint(_address, _remote_port),
+                    boost::asio::ip::udp::endpoint(its_unicast, _local_port),
+                    boost::asio::ip::udp::endpoint(_address, _remote_port),
                     io_,
                     configuration_);
-
+            #ifdef quic_client_test
+            VSOMEIP_DEBUG<<"It runs there";
+            #endif
             if (configuration_->has_enabled_magic_cookies(_address.to_string(),
                     _remote_port)) {
                 its_endpoint->enable_magic_cookies();
@@ -1177,8 +1184,9 @@ std::shared_ptr<endpoint> endpoint_manager_impl::create_client_endpoint(
                     io_,
                     configuration_);
         }
-    } catch (...) {
+    } catch (const std::exception &e) {
         VSOMEIP_ERROR << __func__ << " Client endpoint creation failed";
+        VSOMEIP_ERROR<<e.what();
     }
 
     return its_endpoint;

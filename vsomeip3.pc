@@ -3,7 +3,7 @@ exec_prefix=/usr/local
 libdir=/usr/local/lib
 includedir=/usr/local/include
 
-Name: 
+Name: vsomeip
 Description: New SOME/IP stack, feature complete
 Version: 3.4.10
 Libs: -L${libdir} -lvsomeip3

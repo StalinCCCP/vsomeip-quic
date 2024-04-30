@@ -24,7 +24,7 @@
 
 #include "../include/server_endpoint_impl.hpp"
 #include "../include/endpoint_definition.hpp"
-
+#include "../quic_adaptor/quic_adaptor.hpp"
 #include "../../utility/include/byteorder.hpp"
 #include "../../utility/include/utility.hpp"
 #include "../../service_discovery/include/defines.hpp"
@@ -891,6 +891,7 @@ template class server_endpoint_impl<boost::asio::local::stream_protocol_ext>;
 
 template class server_endpoint_impl<boost::asio::ip::tcp>;
 template class server_endpoint_impl<boost::asio::ip::udp>;
+template class server_endpoint_impl<quic_adaptor::quic_server_adaptor>;
 
 #if VSOMEIP_BOOST_VERSION < 106600
 template class server_endpoint_impl<boost::asio::ip::udp_ext>;
