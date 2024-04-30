@@ -178,3 +178,4 @@
 !build_qnx/*
 *.tar.gz
 *.swp
+**/CMakeCache.txt

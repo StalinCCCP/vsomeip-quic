@@ -33,6 +33,7 @@ int log(void* ctx, const char* buf, size_t len)
 
 context init(int flags, error_code& ec)
 {
+  lsquic_set_log_level("info");
   if (int r = ::lsquic_global_init(flags); r != 0) {
     ec = make_error_code(error::init_failed);
     return {}; // failure
