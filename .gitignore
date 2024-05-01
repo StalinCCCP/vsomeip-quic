@@ -179,3 +179,4 @@
 *.tar.gz
 *.swp
 **/CMakeCache.txt
+**/*.log
