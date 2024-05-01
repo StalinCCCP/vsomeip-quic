@@ -57,7 +57,7 @@ quic_server_endpoint_impl::quic_server_endpoint_impl(
 
         //create server bound to _io
         ssl(boost::asio::ssl::context::tlsv13),
-        quic_server(boost::asio::require(_io.get_executor(),boost::asio::execution::outstanding_work.tracked),nexus::quic::default_server_settings()),
+        quic_server(io_.get_executor()),
         quic_acceptor(quic_server, _local,  ssl)
         // quic_conn(quic_acceptor),
         // quic_stream(quic_conn)
