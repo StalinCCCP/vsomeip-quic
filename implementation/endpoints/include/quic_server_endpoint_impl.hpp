@@ -153,13 +153,14 @@ private:
     static nexus::global::context global;
     boost::asio::ssl::context ssl;
     nexus::quic::server quic_server;
+
+    nexus::quic::acceptor quic_acceptor;
     class dbg{
         public:
         dbg(){
                 VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
         }
     } dbg;
-    nexus::quic::acceptor quic_acceptor;
     // nexus::quic::connection quic_conn;
     // nexus::quic::stream quic_stream;
 private:
