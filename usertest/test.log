@@ -1,0 +1,2091 @@
+18:59:08.848 [DEBUG] handshake: SSL extra data index: 2
+18:59:08.848 [DEBUG] logger: lsquic_logger_init called
+18:59:08.896 [DEBUG] tokgen: TOKGEN2 does not exist: generate
+18:59:08.896 [INFO] tokgen: inserted TOKGEN2 of size 110
+18:59:08.896 [DEBUG] tokgen: initialized
+18:59:08.896 [INFO] engine: instantiated engine
+18:59:08.896 [DEBUG] engine: grew heaps to 4 elements
+18:59:08.896 [DEBUG] conn: generated and assigned SCID 89C42D85D463334E
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: init
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] bbr: initialized
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] cubic: lsquic_cubic_init(cubic, $conn)
+18:59:08.897 [INFO] [QUIC:89C42D85D463334E] cubic: initialized
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] adaptive-cc: initialized
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] cfcw: recv_off changed: read_off: 0; recv_off: 15728640
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: created client, DCID: 9DB9954AB9B2AAE1C104FA8D6658
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: generated transport parameters buffer of 73 bytes
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: max_idle_timeout: 30000; init_max_data: 15728640; init_max_stream_data_bidi_local: 6291456; init_max_stream_data_bidi_remote: 0; init_max_stream_data_uni: 32768; init_max_streams_bidi: 100; init_max_streams_uni: 100; ack_delay_exponent: 3; max_ack_delay: 25; active_connection_id_limit: 8; min_ack_delay: 10000; min_ack_delay_02: 10000; timestamps: 2; loss_bits: 1; initial_source_connection_id: 89C42D85D463334E
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: initialized
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: recv_off changed: read_off: 0; recv_off: 16384
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: created crypto stream
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: calling on_new_stream
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x8C, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 46720; ccfc: 0/0; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 10; pa_next: 0; pa_now: 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.897 [DEBUG] engine: incref conn 89C42D85D463334E, '' -> 'T'
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: put on write queue
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: handshake stream created successfully
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: negotiating version 00000001
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: logging using client SCID
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] event: connection created
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378188233,"CONNECTIVITY","NEW_CONNECTION","LINE",{"ip_version":"4","srcip":"192.168.31.117","dstip":"192.168.31.232","srcport":"52427","dstport":"30509"}]
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] event: version negotiation: proposed version 00000001
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378188240,"CONNECTIVITY","VERNEG","LINE",{"proposed_version":"00000001"}]
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: record path 0: (192.168.31.117:52427 - 192.168.31.232:30509)
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: spin bit enabled on path 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: record new path ID 0
+18:59:08.897 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: dispatch_write_events, sm_qflags: 2. stream_flags: 131072, sm_bflags: 58, max_send_off: 18446744073709551615, tosend_off: 0, sm_n_buffered: 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: buffered 256 bytes; 256 bytes are now in buffer
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: wrote 256 bytes to stream at encryption level 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: will flush up to offset 256
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x9C, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 46720; ccfc: 0/0; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 10; pa_next: 0; pa_now: 288378188255
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #0 INIT; flags: version=1, nonce=0, conn_id=1
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] event: generated CRYPTO frame: offset: 0, size: 256
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: flushed to or past required offset 256
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: retry read
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: enc level INIT after on_write: want read
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: Exit shake_stream
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.897 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:08.897 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: cum_size: 309; limit: 1200
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Added 891 bytes of PADDING to packet #0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 9C168148F2
+18:59:08.897 [DEBUG] engine: batched packet #0 for connection 89C42D85D463334E
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.897 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:08.897 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #0 INIT (PADDING CRYPTO), size 1200, ecn: 0, spin: 0; kp: 0, path: 0, flags: 99082
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #0 (PADDING CRYPTO)
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 0; CWND: 46720
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_INIT pns alarm to 288378338699 (150000), mode RETX_MODE_HANDSHAKE
+18:59:08.897 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:08.897 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:08.897 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: get_frame: no frame at read offset 0
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.897 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.897 [DEBUG] engine: next advisory tick is 149948 usec away: conn 89C42D85D463334E: RETX_INIT
+18:59:08.897 [DEBUG] [QUIC:89C42D85D463334E] conn: delayed stream creation.  Backlog size: 1
+18:59:08.900 [DEBUG] engine: received coalesced datagram of 1252 bytes for connection 89C42D85D463334E
+18:59:08.900 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: end of version negotiation: agreed upon 00000001
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: version negotiation: agreed version 00000001
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378192071,"CONNECTIVITY","VERNEG","PACKET_RX",{"agreed_version":"00000001"}]
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 55A43C5BBD
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: first packet in INIT pns, packno: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: set ISCID to 7DDE173EA44DDC55
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #0 INIT, size: 143; ecn: 0, spin: 0; path: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: set DCID to 7DDE173EA44DDC55
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no scheduled packets at the time of DCID change
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [0-0]
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 0; delta: 154
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] cubic: lsquic_cubic_was_quiet(cubic, 288378192042)
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: ACKed; n_unacked: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 18446744073709551615; ack rate: 2871672
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 0 acked, bandwidth: 2871672 bps
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] cubic: lsquic_cubic_ack(cubic, 288378192042, 3343, 1, 1200)
+18:59:08.901 [INFO] [QUIC:89C42D85D463334E] cubic: min_delay: 3343
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] cubic: ACK: slow threshold, cwnd: 48180
+18:59:08.901 [INFO] [QUIC:89C42D85D463334E] cubic: CWND: 48180
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 0; rtt: 3343; delta: 154; new srtt: 3189
+18:59:08.901 [INFO] [QUIC:89C42D85D463334E] sendctl: srtt is 3189 usec, which is greater than the threshold of 1500 usec: select BBRv1 congestion controller
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bbr: min rtt updated: 0 -> 3343
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_CRYPTO frame
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: RX CRYPTO frame: level 0; offset 0; size 90
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: Got CRYPTO frame for enc level #0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: received stream frame, offset 0, len 90; fin: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: nocopy_di_insert_frame: ins: 0 (case 'Z')
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: max_recv_off goes from 0 to 90
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: recv_off has not changed, still at 16384
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: get_frame: frame (off: 0, size: 90, fin: 0), at read offset 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: get_frame: frame (off: 0, size: 90, fin: 0), at read offset 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: provided 90 bytes of 0-level data to SSL
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: 
+0000  02 00 00 56 03 03 89 D7  6A 7A 74 E7 7D FF 23 36  |...V....jzt.}.#6|
+0010  E4 1C 15 9A 98 C0 F0 08  E3 F0 ED 87 5B F7 FC 32  |............[..2|
+0020  13 EB 32 BE 90 D0 00 13  01 00 00 2E 00 33 00 24  |..2..........3.$|
+0030  00 1D 00 20 4D 68 AB A3  54 1F A6 8F 47 8B A0 7E  |... Mh..T...G..~|
+0040  BC 1A 7B 5D 2E 0A 9C 52  79 20 83 5B 7D 4C 83 8B  |..{]...Ry .[}L..|
+0050  12 F7 12 56 00 2B 00 02  03 04                    |...V.+..........|
+
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: frame (off: 0, size: 90, fin: 0) done
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: get_frame: no frame at read offset 90
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: read_off goes from 0 to 90
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: recv_off has not changed, still at 16384
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: stream_readf: read 90 bytes, read offset 90, reached fin: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: Negotiated cipher ID is 0x3001301
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: set write for level 2
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: Negotiated cipher ID is 0x3001301
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: set read for level 2
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: retry read
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: enc level INIT after on_read: want read
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] di: get_frame: no frame at read offset 90
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: Exit shake_stream
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: INIT pns ACK queued: ackable: 1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378192042,"TRANSPORT","PACKET_RX","LINE",{"raw":"c5000000010889c42d85d463334e087dde173ea44ddc55004075a45a617ac2...","header":{"type":"INIT","payload_length":"127","packet_number":"0"},"frames":[{"frame_type":"ACK"},{"frame_type":"CRYPTO"}]}]
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask C117C6F22C
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: first packet in HSK pns, packno: 1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #1 HSK, size: 1109; ecn: 0, spin: 0; path: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_CRYPTO frame
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: RX CRYPTO frame: level 2; offset 0; size 1063
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: Got CRYPTO frame for enc level #2
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: initialized
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: recv_off changed: read_off: 0; recv_off: 16384
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: created crypto stream
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: calling on_new_stream
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: handshake stream created successfully
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: no frame at read offset 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: received stream frame, offset 0, len 1063; fin: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: nocopy_di_insert_frame: ins: 0 (case 'Z')
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: max_recv_off goes from 0 to 1063
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: recv_off has not changed, still at 16384
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: frame (off: 0, size: 1063, fin: 0), at read offset 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: frame (off: 0, size: 1063, fin: 0), at read offset 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: provided 1063 bytes of 2-level data to SSL
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: 
+0000  08 00 00 7C 00 7A 00 10  00 0A 00 08 07 76 73 6F  |...|.z.......vso|
+0010  6D 65 69 70 00 39 00 68  01 04 80 00 75 30 04 04  |meip.9.h....u0..|
+0020  80 18 00 00 06 04 80 10  00 00 07 02 70 00 08 02  |............p...|
+0030  40 64 09 01 03 0E 01 08  80 00 DE 1A 02 67 10 C0  |@d...........g..|
+0040  00 00 00 FF 02 DE 1A 02  67 10 80 00 71 58 01 02  |........g...qX..|
+0050  50 57 01 01 00 0E 9D B9  95 4A B9 B2 AA E1 C1 04  |PW.......J......|
+0060  FA 8D 66 58 0F 08 7D DE  17 3E A4 4D DC 55 02 10  |..fX..}..>.M.U..|
+0070  48 2D 09 3F 26 7F C4 EC  09 73 B5 5E 6B 42 24 A7  |H-.?&....s.^kB$.|
+0080  0D 00 00 1B 00 00 18 00  0D 00 14 00 12 04 03 08  |................|
+0090  04 04 01 05 03 08 05 05  01 08 06 06 01 02 01 0B  |................|
+00A0  00 03 14 00 00 03 10 00  03 0B 30 82 03 07 30 82  |..........0...0.|
+00B0  01 EF 02 14 43 66 E9 20  9A AD 2C 6A C9 63 68 09  |....Cf. ..,j.ch.|
+00C0  06 20 4F 16 34 9B 25 C3  30 0D 06 09 2A 86 48 86  |. O.4.%.0...*.H.|
+00D0  F7 0D 01 01 0B 05 00 30  40 31 0B 30 09 06 03 55  |.......0@1.0...U|
+00E0  04 06 13 02 43 4E 31 10  30 0E 06 03 55 04 08 0C  |....CN1.0...U...|
+00F0  07 53 69 63 68 75 61 6E  31 10 30 0E 06 03 55 04  |.Sichuan1.0...U.|
+0100  07 0C 07 43 68 65 6E 67  64 75 31 0D 30 0B 06 03  |...Chengdu1.0...|
+0110  55 04 0A 0C 04 43 55 49  54 30 1E 17 0D 32 34 30  |U....CUIT0...240|
+0120  34 31 36 31 32 31 34 35  38 5A 17 0D 32 34 30 35  |416121458Z..2405|
+0130  31 36 31 32 31 34 35 38  5A 30 40 31 0B 30 09 06  |16121458Z0@1.0..|
+0140  03 55 04 06 13 02 43 4E  31 10 30 0E 06 03 55 04  |.U....CN1.0...U.|
+0150  08 0C 07 53 69 63 68 75  61 6E 31 10 30 0E 06 03  |...Sichuan1.0...|
+0160  55 04 07 0C 07 43 68 65  6E 67 64 75 31 0D 30 0B  |U....Chengdu1.0.|
+0170  06 03 55 04 0A 0C 04 43  55 49 54 30 82 01 22 30  |..U....CUIT0.."0|
+0180  0D 06 09 2A 86 48 86 F7  0D 01 01 01 05 00 03 82  |...*.H..........|
+0190  01 0F 00 30 82 01 0A 02  82 01 01 00 E3 35 47 85  |...0.........5G.|
+01A0  76 01 30 65 37 46 0F 92  55 76 1A 39 A5 5F 6C 2F  |v.0e7F..Uv.9._l/|
+01B0  82 75 FA 06 82 96 36 3C  76 6F 95 B8 81 FB 8C FB  |.u....6<vo......|
+01C0  4F AF EE E8 67 AD 80 C6  C8 3C 57 17 14 47 E4 15  |O...g....<W..G..|
+01D0  5A 1A 16 F3 DE FA 7F 92  2F 61 D5 FE EE 0E 8B 12  |Z......./a......|
+01E0  89 18 9B 15 16 BB 0C 7F  D3 F2 4F D8 C9 B0 2F C8  |..........O.../.|
+01F0  03 E8 14 45 BE 67 F9 33  25 13 C7 3A 6C 23 AA 9D  |...E.g.3%..:l#..|
+0200  D9 AD C7 1C 9F 2C 87 D7  5A FA 83 F7 9F 97 37 8F  |.....,..Z.....7.|
+0210  A8 C2 DE 9C 26 71 30 01  F2 F7 F1 6E 4F 34 A9 8F  |....&q0....nO4..|
+0220  FE 96 3C 0F 6B 1D 83 61  43 F1 4D 16 33 E5 5F C0  |..<.k..aC.M.3._.|
+0230  23 69 6C 78 7B 8F 0D 76  D9 80 60 24 72 B7 AA 31  |#ilx{..v..`$r..1|
+0240  4D D7 54 E7 08 BE 4D 2F  35 2B 07 53 C4 E9 CD 8D  |M.T...M/5+.S....|
+0250  9F 65 01 CF A0 89 B8 D7  B7 F3 EA C7 A3 E2 A6 EE  |.e..............|
+0260  C6 B7 C7 E8 FD 51 40 99  75 E8 D0 47 9A AE 20 B2  |.....Q@.u..G.. .|
+0270  93 47 4E BA 9F 6E B8 5A  CA 43 39 4B 6F CF 15 6B  |.GN..n.Z.C9Ko..k|
+0280  7B F4 9C 13 DE FD 65 50  C2 1E F2 EF 5D 96 AD 2F  |{.....eP....]../|
+0290  5F E7 23 99 C9 6D 6D 0A  0D 03 E9 63 02 03 01 00  |_.#..mm....c....|
+02A0  01 30 0D 06 09 2A 86 48  86 F7 0D 01 01 0B 05 00  |.0...*.H........|
+02B0  03 82 01 01 00 A8 16 31  D4 A1 2A C7 1F 15 DE 19  |.......1..*.....|
+02C0  A6 3C D4 A4 99 44 49 15  F5 9C D4 77 F8 13 79 91  |.<...DI....w..y.|
+02D0  4E 5F DE 40 A5 D2 63 BF  58 CB 0C FB 1D 2B 09 94  |N_.@..c.X....+..|
+02E0  90 DE 9B E4 34 92 AE F1  59 DB 26 20 1F 58 3B 93  |....4...Y.& .X;.|
+02F0  96 16 3C C2 D9 F6 DE 8F  9E 37 DF 77 7B 01 BE 57  |..<......7.w{..W|
+0300  D3 65 30 F6 14 AD 31 A3  9B CF A8 E2 BD 61 21 C6  |.e0...1......a!.|
+0310  86 2B E7 55 63 D4 F1 24  0C A1 EC 7C 72 6D BA 89  |.+.Uc..$...|rm..|
+0320  46 2E 15 19 20 39 11 60  DC F5 BC 7F 6B 19 5F D7  |F... 9.`....k._.|
+0330  06 2B 24 0A 9A 02 1C 02  AE FE 6F E0 AC 37 A0 FE  |.+$.......o..7..|
+0340  BC 5E 23 F7 3F 45 4A 85  A3 00 45 C2 45 60 E9 3D  |.^#.?EJ...E.E`.=|
+0350  8A 67 6D 88 29 7D 4D 4B  06 66 74 60 D7 A4 6B C3  |.gm.)}MK.ft`..k.|
+0360  B2 E2 9C C6 29 3B ED 9D  99 47 2C 36 C2 F8 8B 6C  |....);...G,6...l|
+0370  7A AF 0C E0 23 D1 67 0E  F3 8B 6C 41 F2 8C 61 FB  |z...#.g...lA..a.|
+0380  B9 3F 94 6A 40 6C AD 3A  DA E4 E7 3F 27 E1 2C BF  |.?.j@l.:...?'.,.|
+0390  C9 23 7B E8 DF 86 CF 25  0E B6 67 93 54 A4 B2 8A  |.#{....%..g.T...|
+03A0  1F 9C 6E 25 50 03 3C F1  B8 4A 86 D4 81 27 31 F3  |..n%P.<..J...'1.|
+03B0  32 64 44 28 B9 00 00 0F  00 01 04 08 04 01 00 0D  |2dD(............|
+03C0  DA AE 6C 37 D0 16 44 F3  65 35 EE 44 80 43 79 46  |..l7..D.e5.D.CyF|
+03D0  19 C3 1E B6 A7 54 D4 46  0D 0E 6D 97 63 5B 10 87  |.....T.F..m.c[..|
+03E0  4E D7 57 9B E5 6B 6A C7  1C 5A E9 4E 7B 1B 6D 89  |N.W..kj..Z.N{.m.|
+03F0  1E 20 F2 EE C3 24 E2 8C  83 10 BE 24 9F 2E DA 23  |. ...$.....$...#|
+0400  45 58 99 BC 66 FD 67 89  3C 37 1D B5 50 59 F0 AB  |EX..f.g.<7..PY..|
+0410  5D E8 85 4D 2A 87 30 99  D0 52 78 A8 69 AC FA 14  |]..M*.0..Rx.i...|
+0420  0B BE 1A 58 A7 E4 F6                              |...X............|
+
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: frame (off: 0, size: 1063, fin: 0) done
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: no frame at read offset 1063
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: read_off goes from 0 to 1063
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: recv_off has not changed, still at 16384
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: stream_readf: read 1063 bytes, read offset 1063, reached fin: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: retry read
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: enc level HSK after on_read: want read
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: no frame at read offset 1063
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: Exit shake_stream
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: HSK pns ACK queued: ackable: 1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378192606,"TRANSPORT","PACKET_RX","LINE",{"raw":"e1000000010889c42d85d463334e087dde173ea44ddc55443c1604ab2d14ba...","header":{"type":"HSK","payload_length":"1093","packet_number":"1"},"frames":[{"frame_type":"CRYPTO"}]}]
+18:59:08.901 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.901 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #1 INIT; flags: version=0, nonce=0, conn_id=1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 020040720000
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [0-0]
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: add a PING frame before HANDSHAKE_DONE
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 7 bytes of ACK frame into packet #1 on outgoing queue
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: INIT pns ACK state reset
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #2
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #2 HSK; flags: version=0, nonce=0, conn_id=1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 02012B0000
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [1-1]
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: add a PING frame before HANDSHAKE_DONE
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #2 on outgoing queue
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: HSK pns ACK state reset
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 8
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: sit-0 streams: max count: 0; created streams: 0
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] conn: created 0 delayed streams
+18:59:08.901 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:08.901 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: cum_size: 99; limit: 1200
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Added 1101 bytes of PADDING to packet #1
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask EAB8B2F423
+18:59:08.901 [DEBUG] engine: batched packet #1 for connection 89C42D85D463334E
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packet #2 (48 bytes) will be tacked on to previous packet(s) (1152 bytes) (coalescing)
+18:59:08.901 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 63AA7FDC9C
+18:59:08.902 [DEBUG] engine: batched packet #2 for connection 89C42D85D463334E
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.902 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:08.902 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #1 INIT (ACK PADDING), size 1152, ecn: 0, spin: 0; kp: 0, path: 0, flags: 98856
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #1 (ACK PADDING)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 1; CWND: 47920
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #2 HSK (ACK), size 48, ecn: 0, spin: 0; kp: 0, path: 0, flags: 4293128
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #2 (ACK)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 2; CWND: 47920
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: henceforth, no Initial packets shall be sent or received
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: emptied INIT pns, destroyed 1 packet
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: crypto stream level 0 is closed
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] sfcw: read_off goes from 90 to 90
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: destroyed stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551615] stream: history: [CN3w21dr21L]
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:08.902 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.902 [DEBUG] engine: next advisory tick is 199475 usec away: conn 89C42D85D463334E: PING
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 7935880FD1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #2 HSK, size: 235; ecn: 0, spin: 0; path: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_CRYPTO frame
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: RX CRYPTO frame: level 2; offset 1063; size 188
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: Got CRYPTO frame for enc level #2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: received stream frame, offset 1063, len 188; fin: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: nocopy_di_insert_frame: ins: 0 (case 'Z')
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: max_recv_off goes from 1063 to 1251
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: recv_off has not changed, still at 16384
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: frame (off: 1063, size: 188, fin: 0), at read offset 1063
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: frame (off: 1063, size: 188, fin: 0), at read offset 1063
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: provided 188 bytes of 2-level data to SSL
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: 
+0000  BA 96 8B 7C 0E 51 26 F2  07 05 CB 92 38 C3 46 59  |...|.Q&.....8.FY|
+0010  BA 44 AA 92 23 5B B4 CC  4B 14 14 6A 7A 8A 97 E7  |.D..#[..K..jz...|
+0020  55 9F E8 BD 7C 6F 79 3B  E0 8B C8 73 AE DB 37 BD  |U...|oy;...s..7.|
+0030  FC 04 68 78 6A FE DD 2E  A6 29 35 39 8C 74 BB 07  |..hxj....)59.t..|
+0040  C3 49 1B 87 A7 C7 87 D2  02 53 87 57 E7 82 57 90  |.I.......S.W..W.|
+0050  52 D6 F8 BE 73 83 92 E9  2D 9C B1 A7 58 89 D3 A8  |R...s...-...X...|
+0060  29 FE F7 37 06 63 E8 C3  DD 41 61 18 E3 AB 0E 2C  |)..7.c...Aa....,|
+0070  4C 00 14 74 3F 6D A0 65  CB 19 DC 3F 97 42 C4 F5  |L..t?m.e...?.B..|
+0080  4B A5 20 18 C7 A2 12 7C  A8 13 F3 B4 62 6F BF A8  |K. ....|....bo..|
+0090  FB 6D 09 BF 07 11 8F 01  14 00 00 20 52 53 A7 1A  |.m......... RS..|
+00A0  CA 10 E4 4C E7 16 8D 3E  3B 39 6B 6D A4 7F 61 70  |...L...>;9km..ap|
+00B0  9F 42 9E 7E F2 A1 AA 52  7E FB 0E 62              |.B.~...R~..b....|
+
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: frame (off: 1063, size: 188, fin: 0) done
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: no frame at read offset 1251
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: read_off goes from 1063 to 1251
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: recv_off has not changed, still at 16384
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: stream_readf: read 188 bytes, read offset 1251, reached fin: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: not in on_write event: buffer in a frab list
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x810FC, b_out: 48 = (48 + 0); b_retx: 0; cwnd: 47920; ccfc: 0/0; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 8; pa_next: 0; pa_now: 288378192957
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: put on write queue
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: wrote 44 bytes to stream at encryption level 2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: Negotiated cipher ID is 0x3001301
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: set write for level 3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: Negotiated cipher ID is 0x3001301
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: set read for level 3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: handshake reported complete
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: handshake completed
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378193431,"CONNECTIVITY","HANDSHAKE","PACKET_RX",{"status":"complete"}]
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: have peer transport parameters (104 bytes)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: transport parameters (104 bytes):
+0000  01 04 80 00 75 30 04 04  80 18 00 00 06 04 80 10  |....u0..........|
+0010  00 00 07 02 70 00 08 02  40 64 09 01 03 0E 01 08  |....p...@d......|
+0020  80 00 DE 1A 02 67 10 C0  00 00 00 FF 02 DE 1A 02  |.....g..........|
+0030  67 10 80 00 71 58 01 02  50 57 01 01 00 0E 9D B9  |g...qX..PW......|
+0040  95 4A B9 B2 AA E1 C1 04  FA 8D 66 58 0F 08 7D DE  |.J........fX..}.|
+0050  17 3E A4 4D DC 55 02 10  48 2D 09 3F 26 7F C4 EC  |.>.M.U..H-.?&...|
+0060  09 73 B5 5E 6B 42 24 A7                           |.s.^kB$.........|
+
+18:59:08.902 [DEBUG] trapa: read TP 0x1
+18:59:08.902 [DEBUG] trapa: read TP 0x4
+18:59:08.902 [DEBUG] trapa: read TP 0x6
+18:59:08.902 [DEBUG] trapa: read TP 0x7
+18:59:08.902 [DEBUG] trapa: read TP 0x8
+18:59:08.902 [DEBUG] trapa: read TP 0x9
+18:59:08.902 [DEBUG] trapa: read TP 0xE
+18:59:08.902 [DEBUG] trapa: read TP 0xDE1A
+18:59:08.902 [DEBUG] trapa: read TP 0xFF02DE1A
+18:59:08.902 [DEBUG] trapa: read TP 0x7158
+18:59:08.902 [DEBUG] trapa: read TP 0x1057
+18:59:08.902 [DEBUG] trapa: read TP 0x0
+18:59:08.902 [DEBUG] trapa: read TP 0xF
+18:59:08.902 [DEBUG] trapa: read TP 0x2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: original_destination_connection_id values match
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: initial_source_connection_id values match
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: enable sending and receiving QL bits
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: peer transport parameters: max_idle_timeout: 30000; max_udp_payload_size: 65527; init_max_data: 1572864; init_max_stream_data_bidi_local: 0; init_max_stream_data_bidi_remote: 1048576; init_max_stream_data_uni: 12288; init_max_streams_bidi: 100; init_max_streams_uni: 3; ack_delay_exponent: 3; max_ack_delay: 25; active_connection_id_limit: 8; min_ack_delay: 10000; min_ack_delay_02: 10000; timestamps: 2; loss_bits: 1; stateless_reset_token: 482D093F267FC4EC0973B55E6B4224A7; original_destination_connection_id: 9DB9954AB9B2AAE1C104FA8D6658; initial_source_connection_id: 7DDE173EA44DDC55
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: turn on QL loss bits
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: our max idle timeout is 30000 ms, peer's is 30000 ms; use minimum value of 30000 ms
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: PING period is set to 15000000 usec
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: delayed ACKs enabled
+18:59:08.902 [INFO] [QUIC:89C42D85D463334E] conn: applied peer transport parameters
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x1; active: 1; limit: 8)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: sit-0 streams: max count: 100; created streams: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-0] di: initialized
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-0] stream: set priority to 16
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-0] sfcw: recv_off changed: read_off: 0; recv_off: 6291456
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-0] stream: created stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-0] stream: calling on_new_stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: created 1 delayed stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: handshake ok: changed 0 packets from 0-RTT to 1-RTT
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: enc level HSK after on_read: stop
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x850FC, b_out: 48 = (48 + 0); b_retx: 0; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 8; pa_next: 0; pa_now: 288378192957
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: Exit shake_stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: HSK pns ACK queued: ackable: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378193146,"TRANSPORT","PACKET_RX","LINE",{"raw":"e9000000010889c42d85d463334e087dde173ea44ddc5540d237e5f732927b...","header":{"type":"HSK","payload_length":"219","packet_number":"2"},"frames":[{"frame_type":"CRYPTO"}]}]
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #3 HSK; flags: version=0, nonce=0, conn_id=1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 0202350001
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [2-1]
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 5 bytes of ACK frame into packet #3 on outgoing queue
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: HSK pns ACK state reset
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x840FC, b_out: 95 = (48 + 47); b_retx: 0; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 1, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288378193575
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #4
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #4 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 8
+18:59:08.902 [DEBUG] conn: generated and assigned SCID DBCD762D54F524AA
+18:59:08.902 [DEBUG] tokgen: generated stateless reset token 72AC01E5E8008070759664459B907953 for CID DBCD762D54F524AA
+18:59:08.902 [DEBUG] engine: add DBCD762D54F524AA to the list of SCIDs
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: DBCD762D54F524AA)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 1; retire prior to: 0; cid: DBCD762D54F524AA; token: 72AC01E5E8008070759664459B907953
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x3; active: 2; limit: 8)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 1497234 usec
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0x3; active: 2; limit: 8)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] hpi: write-high: add stream 18446744073709551613
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] hpi: write-high: lsquic_hpi_next: return stream 18446744073709551613, incr: 1, priority 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: dispatch_write_events, sm_qflags: 2. stream_flags: 132096, sm_bflags: 58, max_send_off: 18446744073709551615, tosend_off: 0, sm_n_buffered: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: buffered 44 bytes; 44 bytes are now in buffer
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: wrote 44 bytes to stream from frab list
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: will flush up to offset 44
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: generated CRYPTO frame: offset: 0, size: 44
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: flushed to or past required offset 44
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: SSL_process_quic_post_handshake() returned 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: enc level HSK after on_write: want read
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: Exit shake_stream
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask EEE3ED4CDD
+18:59:08.902 [DEBUG] engine: batched packet #3 for connection 89C42D85D463334E
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packet #4 (54 bytes) will be tacked on to previous packet(s) (94 bytes) (coalescing)
+18:59:08.902 [DEBUG] engine: batched packet #4 for connection 89C42D85D463334E
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.902 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask DFAA137068
+18:59:08.902 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #3 HSK (ACK CRYPTO), size 94, ecn: 0, spin: 0; kp: 0, path: 0, flags: 4227610; Q: 0; L: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #3 (ACK CRYPTO)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 3; CWND: 47920
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_HSK pns alarm to 288378203749 (10000), mode RETX_MODE_TLP
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #4 SHORT (NEW_CONNECTION_ID), size 54, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421896; Q: 0; L: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #4 (NEW_CONNECTION_ID)
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 4
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 4
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 4; CWND: 47920
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288378203749 (10000), mode RETX_MODE_TLP
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:08.902 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] di: get_frame: no frame at read offset 1251
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.902 [DEBUG] engine: next advisory tick is 9947 usec away: conn 89C42D85D463334E: RETX_HSK
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 9BC1EED118
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 3
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #3 HSK, size: 47; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [2-2]
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 2; delta: 32
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 2; rtt: 766; delta: 32; new srtt: 2882
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 148
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 1; new rt end: 4
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378193826,"TRANSPORT","PACKET_RX","LINE",{"raw":"eb000000010889c42d85d463334e087dde173ea44ddc554016c2d28e4d6940","header":{"type":"HSK","payload_length":"31","packet_number":"3"},"frames":[{"frame_type":"ACK"}]}]
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 18446744073709551613
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 18446744073709551613, incr: 1, priority 0
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 2
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x18409C, b_out: 148 = (148 + 0); b_retx: 148; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 2; pa_burst: 8; pa_next: 0; pa_now: 288378193877
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x18409C, b_out: 148 = (148 + 0); b_retx: 148; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 2; pa_burst: 8; pa_next: 0; pa_now: 288378193877
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:08.902 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.902 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.902 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.903 [DEBUG] [QUIC:89C42D85D463334E-0] di: get_frame: no frame at read offset 0
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 308ACC29BA
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: first packet in APP pns, packno: 4
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #4 SHORT, size: 427; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_CRYPTO frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: RX CRYPTO frame: level 3; offset 0; size 396
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Got CRYPTO frame for enc level #3
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: initialized
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: recv_off changed: read_off: 0; recv_off: 16384
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: created crypto stream
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: calling on_new_stream
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: handshake stream created successfully
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: get_frame: no frame at read offset 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: received stream frame, offset 0, len 396; fin: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: nocopy_di_insert_frame: ins: 0 (case 'Z')
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: max_recv_off goes from 0 to 396
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: recv_off has not changed, still at 16384
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_HANDSHAKE_DONE frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: RX HANDSHAKE_DONE frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: received HANDSHAKE_DONE frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: henceforth, no Handshake packets shall be sent or received
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: ACKed; n_unacked: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: emptied HSK pns, destroyed 1 packet
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: crypto stream level 2 is closed
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] sfcw: read_off goes from 1251 to 1251
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: destroyed stream
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551613] stream: history: [CN1dr21dr3+0w2+1L]
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: handshake has been confirmed
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: drop SSL object
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: stream is now finished
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: dropped 1 crypto stream
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288378196156
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378195156,"TRANSPORT","PACKET_RX","LINE",{"raw":"4089c42d85d463334e8ed5ef68c8ad8fe4caf3ca3554a6b4e80a952e621626...","header":{"type":"SHORT","payload_length":"411","packet_number":"4"},"frames":[{"frame_type":"CRYPTO"},{"frame_type":"HANDSHAKE_DONE"}]}]
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 18446744073709551612
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 18446744073709551612, incr: 1, priority 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: get_frame: frame (off: 0, size: 396, fin: 0), at read offset 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: get_frame: frame (off: 0, size: 396, fin: 0), at read offset 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: frame (off: 0, size: 396, fin: 0) done
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] di: get_frame: no frame at read offset 396
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: read_off goes from 0 to 396
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: recv_off has not changed, still at 16384
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: stream_readf: read 396 bytes, read offset 396, reached fin: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: no SSL object: discard 396 bytes of SSL data
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x18409C, b_out: 54 = (54 + 0); b_retx: 54; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 8; pa_next: 0; pa_now: 288378195408
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x18409C, b_out: 54 = (54 + 0); b_retx: 54; cwnd: 47920; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 8; pa_next: 0; pa_now: 288378195408
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: crypto stream level 3 is closed
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] sfcw: read_off goes from 396 to 396
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: destroyed stream
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E-18446744073709551612] stream: history: [CN1dFr0L]
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.904 [DEBUG] engine: next advisory tick is 673 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:08.904 [DEBUG] engine: received coalesced datagram of 150 bytes for connection 89C42D85D463334E
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: ignore Handshake packet
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: ignore HSK pns packet
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378195497,"TRANSPORT","PACKET_RX","LINE",{"raw":"ec000000010889c42d85d463334e087dde173ea44ddc554016806059078202","header":{"type":"HSK","payload_length":"47","packet_number":"4611686018427387904"}}]
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 302961096D
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 6
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #6 SHORT, size: 103; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [4-4]
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=1; cid: A621D0DC93801303.  Saved.
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_TOKEN frame
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Got 42-byte NEW_TOKEN 01E78032E3E9DF71D8BED9E133697945586F90E42ECD82BAF5B0F85BB65D087B22FDE05C4183DFB015FC
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: got NEW_TOKEN 01E78032E3E9DF71D8BED9E133697945586F90E42ECD82BAF5B0F85BB65D087B22FDE05C4183DFB015FC
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK queued: ackable: 2; all: 2; had_miss: 0; was_missing: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378195512,"TRANSPORT","PACKET_RX","LINE",{"raw":"4089c42d85d463334e2fbd598f6157047572e2dab85ab1e8e3013ed9c5bed3...","header":{"type":"SHORT","payload_length":"87","packet_number":"6"},"frames":[{"frame_type":"ACK"},{"frame_type":"NEW_CONNECTION_ID"},{"frame_type":"NEW_TOKEN"}]}]
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 4; delta: 72
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 4
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #4
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 234455; ack rate: 124495
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 4 acked, bandwidth: 124495 bps
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 4; rtt: 1763; delta: 72; new srtt: 2733
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bbr: min rtt updated: 3343 -> 1763
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: henceforth, no Handshake packets shall be sent or received
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: emptied HSK pns, destroyed 0 packets
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #5
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #5 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 02060401000000
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [6-6][4-4]
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 7 bytes of ACK frame into packet #5 on outgoing queue
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:08.904 [DEBUG] engine: batched packet #5 for connection 89C42D85D463334E
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.904 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask DB4426EF5E
+18:59:08.904 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #5 SHORT (ACK), size 34, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #5 (ACK)
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 5
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 5; CWND: 47974
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:08.904 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:08.904 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.904 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.904 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.904 [DEBUG] engine: next advisory tick is 8069 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:08.912 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.912 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:08.912 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:08.912 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: packets sent: 5; ACKs received: 3; implied tolerance: 1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: old packet tolerance target: 0, schedule ACK_FREQUENCY decrease to 2
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.521; normalized: 0.567; target: 2.500; error: -1.568; p-error: -1.254, i-error: 0.000; Overall: -1.259; packet tolerance: current: 2, last: 0
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 34 = (34 + 0); b_retx: 0; cwnd: 47974; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288378203769
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #6
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #6 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] event: Generated ACK_FREQUENCY(seqno: 0; pack_tol: 2; upd: 25000; ignore: 1)
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: Generated ACK_FREQUENCY(seqno: 0; pack_tol: 2; upd: 25000; ignore: 1)
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.912 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:08.912 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:08.912 [DEBUG] engine: batched packet #6 for connection 89C42D85D463334E
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:08.912 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 313161FBA1
+18:59:08.912 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #6 SHORT (ACK_FREQUENCY), size 36, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #6 (ACK_FREQUENCY)
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 6
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 6
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 6; CWND: 47974
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288378213936 (10000), mode RETX_MODE_TLP
+18:59:08.912 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:08.912 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:08.912 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.912 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.912 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.912 [DEBUG] engine: next advisory tick is 9946 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:08.914 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 52BB6977C5
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 7
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #7 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [6-5]
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288378205532,"TRANSPORT","PACKET_RX","LINE",{"raw":"6389c42d85d463334ebb6e2142c6e926a49aaedc4337c903a4ead1d43b86cf","header":{"type":"SHORT","payload_length":"17","packet_number":"7"},"frames":[{"frame_type":"ACK"}]}]
+18:59:08.914 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:08.914 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 6; delta: 1056
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 5
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #5
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #6
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 28271; ack rate: 28742
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 6 acked, bandwidth: 28271 bps
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 6; rtt: 1596; delta: 1056; new srtt: 2459
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 2; new rt end: 6
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: min rtt updated: 1763 -> 1596
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48010; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288378205591
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48010; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288378205591
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.914 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:08.914 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.914 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.914 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.914 [DEBUG] engine: next advisory tick is 8257 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:08.922 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:08.922 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:08.922 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:08.922 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.241; normalized: 0.262; target: 2.500; error: -2.338; p-error: -1.870, i-error: 0.000; Overall: -1.876; packet tolerance: current: 2, last: 2
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48010; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288378213959
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48010; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288378213959
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:08.922 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:08.922 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:08.922 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:08.923 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:08.923 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:08.923 [DEBUG] engine: next advisory tick is 1476750 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:10.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:10.399 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:10.399 [DEBUG] eng-hist: 18:59:10: pi: 8; po: 5; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:10.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:10.399 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48010; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288379690861
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #7
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #7 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:10.399 [DEBUG] conn: generated and assigned SCID 9B38262DCBD17DEA
+18:59:10.399 [DEBUG] tokgen: generated stateless reset token 5C3B3309058D77CE40BCA77382C7F112 for CID 9B38262DCBD17DEA
+18:59:10.399 [DEBUG] engine: add 9B38262DCBD17DEA to the list of SCIDs
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: 9B38262DCBD17DEA)
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 2; retire prior to: 0; cid: 9B38262DCBD17DEA; token: 5C3B3309058D77CE40BCA77382C7F112
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x7; active: 3; limit: 8)
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 999965 usec
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0x7; active: 3; limit: 8)
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:10.399 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags     ; <empty>
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags     ; <empty>
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags     ; <empty>
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags     ; <empty>
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:10.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:10.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:10.400 [DEBUG] engine: batched packet #7 for connection 89C42D85D463334E
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:10.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask A91F4205F4
+18:59:10.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #7 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #7 (NEW_CONNECTION_ID)
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 7
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 7
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 7; CWND: 48010
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288379719787 (28688), mode RETX_MODE_TLP
+18:59:10.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:10.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:10.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:10.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:10.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:10.400 [DEBUG] engine: next advisory tick is 28619 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:10.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 82E7B4BADB
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 8
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #8 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [7-5]
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288379692845,"TRANSPORT","PACKET_RX","LINE",{"raw":"4389c42d85d463334ee7bc680d0a352c4369274ca494ddeaf4c31730679ac7","header":{"type":"SHORT","payload_length":"17","packet_number":"8"},"frames":[{"frame_type":"ACK"}]}]
+18:59:10.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:10.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 7; delta: 1104
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 7
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #7
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 18446744073709551615; ack rate: 252004
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 7 acked, bandwidth: 252004 bps
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 7; rtt: 1746; delta: 1104; new srtt: 2232
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 3; new rt end: 7
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288379692908
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288379692908
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:10.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:10.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:10.401 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:10.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:10.401 [DEBUG] engine: next advisory tick is 26801 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:10.403 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask FD5376B55D
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 9
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #9 SHORT, size: 55; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=2; cid: 27826E1411DC435B.  Saved.
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288379696026
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288379695026,"TRANSPORT","PACKET_RX","LINE",{"raw":"4489c42d85d463334e537f6a047b84a0af0466a6cd5abcf53db82a4f4ef7ea","header":{"type":"SHORT","payload_length":"39","packet_number":"9"},"frames":[{"frame_type":"NEW_CONNECTION_ID"}]}]
+18:59:10.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:10.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288379695087
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288379695087
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:10.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:10.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:10.404 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:10.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:10.404 [DEBUG] engine: next advisory tick is 892 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:10.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:10.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:10.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:10.405 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired ACK_APP alarm
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK timer expired (288379696026 < 288379696086): ACK queued
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #8
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #8 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 020940840002
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [9-7]
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #8 on outgoing queue
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:10.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:10.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:10.405 [DEBUG] engine: batched packet #8 for connection 89C42D85D463334E
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:10.405 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 748A9E27F9
+18:59:10.405 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #8 SHORT (ACK), size 33, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #8 (ACK)
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 8
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 8; CWND: 48065
+18:59:10.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:10.405 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:10.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:10.405 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:10.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:10.405 [DEBUG] engine: next advisory tick is 23559 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:10.428 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:10.428 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:10.428 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:10.428 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.001; normalized: 0.002; target: 2.500; error: -7.431; p-error: -5.944, i-error: 0.000; Overall: -5.962; packet tolerance: current: 2, last: 2
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.428 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288379719923
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288379719923
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:10.429 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:10.429 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:10.429 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:10.429 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:10.429 [DEBUG] engine: next advisory tick is 970743 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:11.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:11.399 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:11.399 [DEBUG] eng-hist: 18:59:11: pi: 2; po: 2; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:11.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:11.399 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:11.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48065; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288380690891
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #9
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #9 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:11.400 [DEBUG] conn: generated and assigned SCID 5877D4FAA9D968D1
+18:59:11.400 [DEBUG] tokgen: generated stateless reset token 0A98039031BAF015EE1027ED3F12D452 for CID 5877D4FAA9D968D1
+18:59:11.400 [DEBUG] engine: add 5877D4FAA9D968D1 to the list of SCIDs
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: 5877D4FAA9D968D1)
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 3; retire prior to: 0; cid: 5877D4FAA9D968D1; token: 0A98039031BAF015EE1027ED3F12D452
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0xF; active: 4; limit: 8)
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 999951 usec
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0xF; active: 4; limit: 8)
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags rs  ; seqno: 3; 5877D4FAA9D968D1
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags     ; <empty>
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags     ; <empty>
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags     ; <empty>
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:11.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:11.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:11.400 [DEBUG] engine: batched packet #9 for connection 89C42D85D463334E
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:11.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask C4F126F50B
+18:59:11.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #9 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #9 (NEW_CONNECTION_ID)
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 9
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 9
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 9; CWND: 48065
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288380701185 (10000), mode RETX_MODE_TLP
+18:59:11.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:11.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:11.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:11.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:11.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:11.400 [DEBUG] engine: next advisory tick is 9939 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:11.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask DF59614809
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 10
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #10 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [9-8]
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288380692823,"TRANSPORT","PACKET_RX","LINE",{"raw":"6689c42d85d463334e596b4f4d5c837bb90f7fd3f5d1793da18b8b7e56c324","header":{"type":"SHORT","payload_length":"17","packet_number":"10"},"frames":[{"frame_type":"ACK"}]}]
+18:59:11.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:11.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 9; delta: 1072
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 8
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #8
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #9
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 439; ack rate: 440
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 9 acked, bandwidth: 439 bps
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 9; rtt: 1638; delta: 1072; new srtt: 2023
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 4; new rt end: 9
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288380692902
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288380692902
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:11.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:11.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:11.401 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:11.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:11.401 [DEBUG] engine: next advisory tick is 8178 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:11.403 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 74A2DDB230
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 11
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #11 SHORT, size: 55; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=3; cid: 258812132644335B.  Saved.
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288380695968
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288380694968,"TRANSPORT","PACKET_RX","LINE",{"raw":"6589c42d85d463334ea2d69159ad1389f32c8765f26cf5fff08fb2d042764c","header":{"type":"SHORT","payload_length":"39","packet_number":"11"},"frames":[{"frame_type":"NEW_CONNECTION_ID"}]}]
+18:59:11.403 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:11.403 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.403 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288380695030
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288380695030
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:11.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:11.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:11.404 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:11.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:11.404 [DEBUG] engine: next advisory tick is 890 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:11.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:11.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:11.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:11.405 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired ACK_APP alarm
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK timer expired (288380695968 < 288380696030): ACK queued
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #10
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #10 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 020B40840001
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [11-10]
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #10 on outgoing queue
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:11.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:11.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:11.405 [DEBUG] engine: batched packet #10 for connection 89C42D85D463334E
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:11.405 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask CCE095A3BD
+18:59:11.405 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #10 SHORT (ACK), size 33, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #10 (ACK)
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 10
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 10; CWND: 48120
+18:59:11.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:11.405 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:11.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:11.405 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:11.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:11.405 [DEBUG] engine: next advisory tick is 5020 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:11.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:11.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:11.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:11.410 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.002; normalized: 0.002; target: 2.500; error: -7.101; p-error: -5.680, i-error: 0.000; Overall: -5.696; packet tolerance: current: 2, last: 2
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288380701258
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288380701258
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:11.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:11.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:11.410 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:11.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:11.410 [DEBUG] engine: next advisory tick is 989479 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:12.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:12.399 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:12.399 [DEBUG] eng-hist: 18:59:12: pi: 2; po: 2; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:12.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:12.399 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48120; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288381690895
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #11
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #11 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:12.399 [DEBUG] conn: generated and assigned SCID 415A889ABE5A0117
+18:59:12.399 [DEBUG] tokgen: generated stateless reset token BC662B276888AAEA09014703FA2FAAFF for CID 415A889ABE5A0117
+18:59:12.399 [DEBUG] engine: add 415A889ABE5A0117 to the list of SCIDs
+18:59:12.399 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: 415A889ABE5A0117)
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 4; retire prior to: 0; cid: 415A889ABE5A0117; token: BC662B276888AAEA09014703FA2FAAFF
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x1F; active: 5; limit: 8)
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 999958 usec
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0x1F; active: 5; limit: 8)
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags rs  ; seqno: 3; 5877D4FAA9D968D1
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags rs  ; seqno: 4; 415A889ABE5A0117
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags     ; <empty>
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags     ; <empty>
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:12.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:12.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:12.400 [DEBUG] engine: batched packet #11 for connection 89C42D85D463334E
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:12.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 01E71A4B05
+18:59:12.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #11 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #11 (NEW_CONNECTION_ID)
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 11
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 11
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 11; CWND: 48120
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288381701120 (10000), mode RETX_MODE_TLP
+18:59:12.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:12.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:12.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:12.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:12.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:12.400 [DEBUG] engine: next advisory tick is 9931 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:12.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 63E2F960C1
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 12
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #12 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [11-10]
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288381692810,"TRANSPORT","PACKET_RX","LINE",{"raw":"4289c42d85d463334ee2f5a72074351bff4ab3bea963062e5dcb53a96063bb","header":{"type":"SHORT","payload_length":"17","packet_number":"12"},"frames":[{"frame_type":"ACK"}]}]
+18:59:12.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:12.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 11; delta: 1072
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 10
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #10
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #11
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 440; ack rate: 440
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 11 acked, bandwidth: 440 bps
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 11; rtt: 1690; delta: 1072; new srtt: 1848
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 5; new rt end: 11
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288381692873
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288381692873
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:12.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:12.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:12.401 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:12.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:12.401 [DEBUG] engine: next advisory tick is 8144 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:12.403 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask A2D4A6CEAE
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 13
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #13 SHORT, size: 55; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=4; cid: 6D67A561DA2370E6.  Saved.
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288381696037
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288381695037,"TRANSPORT","PACKET_RX","LINE",{"raw":"4389c42d85d463334ed4abadc806459cde7970514bcc90033ebdfe27ca657d","header":{"type":"SHORT","payload_length":"39","packet_number":"13"},"frames":[{"frame_type":"NEW_CONNECTION_ID"}]}]
+18:59:12.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:12.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288381695121
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288381695121
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:12.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:12.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:12.404 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:12.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:12.404 [DEBUG] engine: next advisory tick is 865 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:12.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:12.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:12.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:12.405 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired ACK_APP alarm
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK timer expired (288381696037 < 288381696101): ACK queued
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #12
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #12 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 020D40850001
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [13-12]
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #12 on outgoing queue
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:12.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:12.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:12.405 [DEBUG] engine: batched packet #12 for connection 89C42D85D463334E
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:12.405 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 3848748121
+18:59:12.405 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #12 SHORT (ACK), size 33, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #12 (ACK)
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 12
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 12; CWND: 48175
+18:59:12.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:12.405 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:12.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:12.405 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:12.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:12.405 [DEBUG] engine: next advisory tick is 4893 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:12.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:12.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:12.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:12.410 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.002; normalized: 0.002; target: 2.500; error: -7.210; p-error: -5.768, i-error: 0.000; Overall: -5.782; packet tolerance: current: 2, last: 2
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288381701187
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288381701187
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:12.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:12.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:12.410 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:12.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:12.410 [DEBUG] engine: next advisory tick is 989568 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:13.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:13.399 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:13.399 [DEBUG] eng-hist: 18:59:13: pi: 2; po: 2; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:13.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:13.399 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:13.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48175; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288382690902
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #13
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #13 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:13.400 [DEBUG] conn: generated and assigned SCID 96FF204DA4A62053
+18:59:13.400 [DEBUG] tokgen: generated stateless reset token 3935740E5970E5CE5B9F56E32F74675A for CID 96FF204DA4A62053
+18:59:13.400 [DEBUG] engine: add 96FF204DA4A62053 to the list of SCIDs
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: 96FF204DA4A62053)
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 5; retire prior to: 0; cid: 96FF204DA4A62053; token: 3935740E5970E5CE5B9F56E32F74675A
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x3F; active: 6; limit: 8)
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 999959 usec
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0x3F; active: 6; limit: 8)
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags rs  ; seqno: 3; 5877D4FAA9D968D1
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags rs  ; seqno: 4; 415A889ABE5A0117
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags rs  ; seqno: 5; 96FF204DA4A62053
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags     ; <empty>
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:13.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:13.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:13.400 [DEBUG] engine: batched packet #13 for connection 89C42D85D463334E
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:13.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 5A957350C1
+18:59:13.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #13 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #13 (NEW_CONNECTION_ID)
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 13
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 13
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 13; CWND: 48175
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288382701180 (10000), mode RETX_MODE_TLP
+18:59:13.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:13.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:13.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:13.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:13.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:13.400 [DEBUG] engine: next advisory tick is 9925 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:13.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 9E74A906C0
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 14
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #14 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [13-12]
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288382692927,"TRANSPORT","PACKET_RX","LINE",{"raw":"6789c42d85d463334e74a74fbeec671399137065b7dde5092155bdd0947fa5","header":{"type":"SHORT","payload_length":"17","packet_number":"14"},"frames":[{"frame_type":"ACK"}]}]
+18:59:13.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:13.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 13; delta: 1144
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 12
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #12
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #13
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 439; ack rate: 439
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 13 acked, bandwidth: 439 bps
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 13; rtt: 1747; delta: 1144; new srtt: 1692
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 6; new rt end: 13
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:13.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288382693005
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288382693005
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:13.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:13.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:13.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:13.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:13.402 [DEBUG] engine: next advisory tick is 8088 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:13.403 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask C3B5957DDD
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 15
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #15 SHORT, size: 55; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=5; cid: 9A7AE49B1F12F7C3.  Saved.
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288382696048
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288382695048,"TRANSPORT","PACKET_RX","LINE",{"raw":"6289c42d85d463334eb59a9eb92437de19b0eaae293dbf5819a1b874667d33","header":{"type":"SHORT","payload_length":"39","packet_number":"15"},"frames":[{"frame_type":"NEW_CONNECTION_ID"}]}]
+18:59:13.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:13.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288382695116
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288382695116
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:13.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:13.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:13.404 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:13.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:13.404 [DEBUG] engine: next advisory tick is 893 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:13.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:13.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:13.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:13.405 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired ACK_APP alarm
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK timer expired (288382696048 < 288382696111): ACK queued
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #14
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #14 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 020F40840001
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [15-14]
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #14 on outgoing queue
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:13.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:13.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:13.405 [DEBUG] engine: batched packet #14 for connection 89C42D85D463334E
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:13.405 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask AA804529E4
+18:59:13.405 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #14 SHORT (ACK), size 33, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #14 (ACK)
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 14
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 14; CWND: 48230
+18:59:13.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:13.405 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:13.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:13.405 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:13.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:13.405 [DEBUG] engine: next advisory tick is 4930 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:13.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:13.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:13.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:13.410 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.002; normalized: 0.002; target: 2.500; error: -7.298; p-error: -5.839, i-error: 0.000; Overall: -5.852; packet tolerance: current: 2, last: 2
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288382701252
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288382701252
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:13.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:13.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:13.410 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:13.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:13.410 [DEBUG] engine: next advisory tick is 989522 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:14.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:14.399 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:14.399 [DEBUG] eng-hist: 18:59:14: pi: 2; po: 2; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:14.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:14.399 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48230; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288383690940
+18:59:14.399 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #15
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #15 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:14.400 [DEBUG] conn: generated and assigned SCID 18F5297B4C7463EC
+18:59:14.400 [DEBUG] tokgen: generated stateless reset token 012CFBB25201896208DA21B18E8E04AB for CID 18F5297B4C7463EC
+18:59:14.400 [DEBUG] engine: add 18F5297B4C7463EC to the list of SCIDs
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: 18F5297B4C7463EC)
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 6; retire prior to: 0; cid: 18F5297B4C7463EC; token: 012CFBB25201896208DA21B18E8E04AB
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 1 (n_cces 8; mask: 0x7F; active: 7; limit: 8)
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt no SCID slots available (rate-limited), must wait 999932 usec
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0x7F; active: 7; limit: 8)
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags rs  ; seqno: 3; 5877D4FAA9D968D1
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags rs  ; seqno: 4; 415A889ABE5A0117
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags rs  ; seqno: 5; 96FF204DA4A62053
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags rs  ; seqno: 6; 18F5297B4C7463EC
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags     ; <empty>
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:14.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:14.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:14.400 [DEBUG] engine: batched packet #15 for connection 89C42D85D463334E
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:14.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 386A51E0D1
+18:59:14.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #15 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #15 (NEW_CONNECTION_ID)
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 15
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 15
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 15; CWND: 48230
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288383701162 (10000), mode RETX_MODE_TLP
+18:59:14.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:14.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:14.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:14.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:14.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:14.400 [DEBUG] engine: next advisory tick is 9926 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:14.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 83C1233F01
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 16
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #16 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [15-14]
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288383692792,"TRANSPORT","PACKET_RX","LINE",{"raw":"4289c42d85d463334ec1339db54252c59c2eba1e09bbe9e64765585c0c6fea","header":{"type":"SHORT","payload_length":"17","packet_number":"16"},"frames":[{"frame_type":"ACK"}]}]
+18:59:14.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:14.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 15; delta: 1056
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 14
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #14
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #15
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 440; ack rate: 440
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 15 acked, bandwidth: 440 bps
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 15; rtt: 1630; delta: 1056; new srtt: 1552
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 7; new rt end: 15
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288383692862
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288383692862
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:14.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:14.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:14.401 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:14.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:14.401 [DEBUG] engine: next advisory tick is 8195 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:14.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask C22FEC159F
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 17
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #17 SHORT, size: 55; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_NEW_CONNECTION_ID frame
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] conn: Got new connection ID from peer: seq=6; cid: 9E2962692B108A34.  Saved.
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK alarm set to 288383696065
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288383695065,"TRANSPORT","PACKET_RX","LINE",{"raw":"4389c42d85d463334e2ffd3e529af1999e4da58c4871b6fd5e3131539bd6e6","header":{"type":"SHORT","payload_length":"39","packet_number":"17"},"frames":[{"frame_type":"NEW_CONNECTION_ID"}]}]
+18:59:14.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:14.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288383695122
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288383695122
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:14.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:14.404 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:14.404 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:14.404 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:14.404 [DEBUG] engine: next advisory tick is 899 usec away: conn 89C42D85D463334E: ACK_APP
+18:59:14.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:14.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:14.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:14.405 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired ACK_APP alarm
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK timer expired (288383696065 < 288383696124): ACK queued
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #16
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #16 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] conn: ACK bytes: 021140840001
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] event: generated ACK frame: [17-16]
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] conn: Put 6 bytes of ACK frame into packet #16 on outgoing queue
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] conn: APP pns ACK state reset
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:14.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:14.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:14.405 [DEBUG] engine: batched packet #16 for connection 89C42D85D463334E
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:14.405 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 1351E3DC55
+18:59:14.405 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #16 SHORT (ACK), size 33, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #16 (ACK)
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 16
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 16; CWND: 48285
+18:59:14.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:14.405 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:14.405 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:14.405 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:14.405 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:14.405 [DEBUG] engine: next advisory tick is 4909 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:14.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:14.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:14.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:14.410 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.002; normalized: 0.002; target: 2.500; error: -7.385; p-error: -5.908, i-error: 0.000; Overall: -5.920; packet tolerance: current: 2, last: 2
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288383701261
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288383701261
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:14.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:14.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:14.410 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:14.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:14.410 [DEBUG] engine: next advisory tick is 989498 usec away: conn 89C42D85D463334E: CID_THROT
+18:59:15.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:15.400 [DEBUG] eng-hist: 18:59:15: pi: 2; po: 2; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:15.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired CID_THROT alarm
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: cid_throt_alarm_expired
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 33 = (33 + 0); b_retx: 0; cwnd: 48285; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 1; pa_burst: 9; pa_next: 0; pa_now: 288384690975
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #17
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #17 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:15.400 [DEBUG] conn: generated and assigned SCID D8600A7D259A69D0
+18:59:15.400 [DEBUG] tokgen: generated stateless reset token 936A964CE1D4CA3A59529B69DDA06326 for CID D8600A7D259A69D0
+18:59:15.400 [DEBUG] engine: add D8600A7D259A69D0 to the list of SCIDs
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: generated 28-byte NEW_CONNECTION_ID frame (CID: D8600A7D259A69D0)
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] event: generated NEW_CONNECTION_ID frame: seqno: 7; retire prior to: 0; cid: D8600A7D259A69D0; token: 936A964CE1D4CA3A59529B69DDA06326
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: can issue CIDs: 0 (n_cces 8; mask: 0xFF; active: 8; limit: 8)
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: All 8 SCID slots have been assigned
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Log SCID array: (n_cces 8; mask: 0xFF; active: 8; limit: 8)
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   0: flags su  ; seqno: 0; 89C42D85D463334E
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   1: flags rs  ; seqno: 1; DBCD762D54F524AA
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   2: flags rs  ; seqno: 2; 9B38262DCBD17DEA
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   3: flags rs  ; seqno: 3; 5877D4FAA9D968D1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   4: flags rs  ; seqno: 4; 415A889ABE5A0117
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   5: flags rs  ; seqno: 5; 96FF204DA4A62053
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   6: flags rs  ; seqno: 6; 18F5297B4C7463EC
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn:   7: flags rs  ; seqno: 7; D8600A7D259A69D0
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:15.400 [DEBUG] engine: batched packet #17 for connection 89C42D85D463334E
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:15.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 6B19C6D44B
+18:59:15.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #17 SHORT (NEW_CONNECTION_ID), size 55, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #17 (NEW_CONNECTION_ID)
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: add info for packet 17
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 17
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 17; CWND: 48285
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: set RETX_APP pns alarm to 288384701254 (10000), mode RETX_MODE_TLP
+18:59:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:15.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:15.400 [DEBUG] engine: next advisory tick is 9931 usec away: conn 89C42D85D463334E: RETX_APP
+18:59:15.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask EC2034E844
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 18
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #18 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [17-16]
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288384692944,"TRANSPORT","PACKET_RX","LINE",{"raw":"6589c42d85d463334e2026d2ce9778c563a1dd3d72de9a71326aab8f3e23f7","header":{"type":"SHORT","payload_length":"17","packet_number":"18"},"frames":[{"frame_type":"ACK"}]}]
+18:59:15.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:15.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 17; delta: 1056
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 16
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #16
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #17
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: send rate: 439; ack rate: 439
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: packet 17 acked, bandwidth: 439 bps
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 17; rtt: 1690; delta: 1056; new srtt: 1437
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 8; new rt end: 17
+18:59:15.401 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288384693009
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288384693009
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:15.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:15.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:15.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:15.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:15.402 [DEBUG] engine: next advisory tick is 8153 usec away: conn 89C42D85D463334E: PACK_TOL
+18:59:15.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:15.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:15.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:15.410 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PACK_TOL alarm
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] conn: packet tolerance unchanged at 2
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] conn: avg ACKs per RTT: 0.001; normalized: 0.002; target: 2.500; error: -7.462; p-error: -5.969, i-error: 0.000; Overall: -5.981; packet tolerance: current: 2, last: 2
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] conn: no unacked retx data: do not rearm the packet tolerance alarm
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288384701352
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288384701352
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:15.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:15.410 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:15.410 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:15.410 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:15.410 [DEBUG] engine: next advisory tick is 14989506 usec away: conn 89C42D85D463334E: PING
+18:59:30.399 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:30.400 [DEBUG] eng-hist: 18:59:30: pi: 1; po: 1; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:30.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PING alarm
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Ping alarm rang: schedule PING frame to be generated
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288399691035
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #18
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #18 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: wrote PING frame
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow cap: wrote: 0; max: 1572864
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow control window: read: 0; max: 15728640
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: padded packet 18 with 1 bytes of PADDING
+18:59:30.400 [DEBUG] engine: batched packet #18 for connection 89C42D85D463334E
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:30.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask E79980A40F
+18:59:30.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #18 SHORT (PADDING PING), size 29, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #18 (PADDING PING)
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 18
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 18; CWND: 48340
+18:59:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:30.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:30.400 [DEBUG] engine: next advisory tick is 14999723 usec away: conn 89C42D85D463334E: PING
+18:59:30.401 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 4C60415D4C
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 19
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #19 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [18-16]
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288399692902,"TRANSPORT","PACKET_RX","LINE",{"raw":"4589c42d85d463334e60521191925fe281b00e890831d1f4e280abdfdc27f4","header":{"type":"SHORT","payload_length":"17","packet_number":"19"},"frames":[{"frame_type":"ACK"}]}]
+18:59:30.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:30.401 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 18; delta: 1088
+18:59:30.401 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 18
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #18
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 18; rtt: 1653; delta: 1088; new srtt: 1328
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 9; new rt end: 18
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288399693037
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288399693037
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:30.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:30.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:30.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:30.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:45.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:45.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+18:59:45.400 [DEBUG] eng-hist: 18:59:45: pi: 1; po: 1; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+18:59:45.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+18:59:45.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PING alarm
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Ping alarm rang: schedule PING frame to be generated
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288414691176
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #19
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #19 SHORT; flags: version=0, nonce=0, conn_id=1
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] conn: wrote PING frame
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow cap: wrote: 0; max: 1572864
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow control window: read: 0; max: 15728640
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:45.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+18:59:45.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: padded packet 19 with 1 bytes of PADDING
+18:59:45.400 [DEBUG] engine: batched packet #19 for connection 89C42D85D463334E
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+18:59:45.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 31A03CB8EF
+18:59:45.400 [DEBUG] engine: packets out returned 1 (out of 1)
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #19 SHORT (PADDING PING), size 29, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #19 (PADDING PING)
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 19
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 19; CWND: 48340
+18:59:45.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+18:59:45.400 [DEBUG] engine: send_packets_out: sent 1 packet
+18:59:45.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:45.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:45.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+18:59:45.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 50B01B188E
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 20
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #20 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [19-16]
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288414693303,"TRANSPORT","PACKET_RX","LINE",{"raw":"6189c42d85d463334eb00f77069ea539a5fd8c2564329bef7d83ba8f5259d6","header":{"type":"SHORT","payload_length":"17","packet_number":"20"},"frames":[{"frame_type":"ACK"}]}]
+18:59:45.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+18:59:45.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 19; delta: 1120
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 19
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #19
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 19; rtt: 1838; delta: 1120; new srtt: 1251
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 10; new rt end: 19
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288414693381
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288414693381
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+18:59:45.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+18:59:45.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+18:59:45.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+18:59:45.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:00.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:00.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+19:00:00.400 [DEBUG] eng-hist: 19:00:00: pi: 1; po: 1; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+19:00:00.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+19:00:00.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PING alarm
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Ping alarm rang: schedule PING frame to be generated
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288429691281
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #20
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #20 SHORT; flags: version=0, nonce=0, conn_id=1
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] conn: wrote PING frame
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow cap: wrote: 0; max: 1572864
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow control window: read: 0; max: 15728640
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:00.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+19:00:00.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: padded packet 20 with 1 bytes of PADDING
+19:00:00.400 [DEBUG] engine: batched packet #20 for connection 89C42D85D463334E
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+19:00:00.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 02EDA71754
+19:00:00.400 [DEBUG] engine: packets out returned 1 (out of 1)
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #20 SHORT (PADDING PING), size 29, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #20 (PADDING PING)
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 20
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 20; CWND: 48340
+19:00:00.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+19:00:00.400 [DEBUG] engine: send_packets_out: sent 1 packet
+19:00:00.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:00.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:00.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:00.400 [DEBUG] engine: next advisory tick is 14999764 usec away: conn 89C42D85D463334E: PING
+19:00:00.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 3ABA59C85E
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 21
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #21 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [20-16]
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288429693145,"TRANSPORT","PACKET_RX","LINE",{"raw":"4389c42d85d463334eba4c982f1d7470b3cb3f004daeb3e8a7f492e1c80ed9","header":{"type":"SHORT","payload_length":"17","packet_number":"21"},"frames":[{"frame_type":"ACK"}]}]
+19:00:00.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+19:00:00.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 20; delta: 1096
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 20
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #20
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 20; rtt: 1686; delta: 1096; new srtt: 1168
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 11; new rt end: 20
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288429693226
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288429693226
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:00.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+19:00:00.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:00.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:00.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+19:00:15.400 [DEBUG] eng-hist: 19:00:15: pi: 1; po: 1; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+19:00:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+19:00:15.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PING alarm
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Ping alarm rang: schedule PING frame to be generated
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288444691379
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #21
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #21 SHORT; flags: version=0, nonce=0, conn_id=1
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: wrote PING frame
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow cap: wrote: 0; max: 1572864
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow control window: read: 0; max: 15728640
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+19:00:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: padded packet 21 with 1 bytes of PADDING
+19:00:15.400 [DEBUG] engine: batched packet #21 for connection 89C42D85D463334E
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+19:00:15.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 497A2A1100
+19:00:15.400 [DEBUG] engine: packets out returned 1 (out of 1)
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #21 SHORT (PADDING PING), size 29, ecn: 0, spin: 1; kp: 0, path: 0, flags: 1082163752; Q: 0; L: 0
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #21 (PADDING PING)
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 21
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 21; CWND: 48340
+19:00:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+19:00:15.400 [DEBUG] engine: send_packets_out: sent 1 packet
+19:00:15.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:15.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:15.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:15.400 [DEBUG] engine: next advisory tick is 14999774 usec away: conn 89C42D85D463334E: PING
+19:00:15.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 43296A72CD
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 22
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #22 SHORT, size: 33; ecn: 0, spin: 1; path: 0; Q: 0; L: 0
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [21-16]
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288444693170,"TRANSPORT","PACKET_RX","LINE",{"raw":"6289c42d85d463334e297cbfa20e4989560f92804fdcce382365951920a20d","header":{"type":"SHORT","payload_length":"17","packet_number":"22"},"frames":[{"frame_type":"ACK"}]}]
+19:00:15.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+19:00:15.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 21; delta: 1072
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 21
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #21
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 21; rtt: 1619; delta: 1072; new srtt: 1090
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 12; new rt end: 21
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288444693258
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288444693258
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:15.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+19:00:15.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:15.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:15.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HT'
+19:00:30.400 [DEBUG] eng-hist: 19:00:30: pi: 1; po: 1; +mc: 0; -mc: 0; +fc: 0; -fc: 0
+19:00:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HT' -> 'H'
+19:00:30.400 [INFO] [QUIC:89C42D85D463334E] alarmset: ring expired PING alarm
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: Ping alarm rang: schedule PING frame to be generated
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848FC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288459691486
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: created packet #22
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] event: created packet #22 SHORT; flags: version=0, nonce=0, conn_id=1
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: replenish tokens: 10
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_packet_scheduled: tokens: 9
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: wrote PING frame
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow cap: wrote: 0; max: 1572864
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: connection flow control window: read: 0; max: 15728640
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HO'
+19:00:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'HO' -> 'HOK'
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: padded packet 22 with 1 bytes of PADDING
+19:00:30.400 [DEBUG] engine: batched packet #22 for connection 89C42D85D463334E
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: no more scheduled packets
+19:00:30.400 [DEBUG] engine: batched all outgoing packets for full conn 89C42D85D463334E
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: flush header protection application, count: 1
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] handshake: apply header protection using mask 216E644121
+19:00:30.400 [DEBUG] engine: packets out returned 1 (out of 1)
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] event: TX packet #22 SHORT (PADDING PING), size 29, ecn: 0, spin: 0; kp: 0, path: 0, flags: 8421928; Q: 0; L: 0
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] sendctl: sent packet #22 (PADDING PING)
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] bw-sampler: app limited, end of limited phase is 22
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] bbr: becoming application-limited.  Last sent packet: 22; CWND: 48340
+19:00:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HOK' -> 'HK'
+19:00:30.400 [DEBUG] engine: send_packets_out: sent 1 packet
+19:00:30.400 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:30.400 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:30.400 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'
+19:00:30.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'HA' -> 'HTA'
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: strip header protection using mask 161A8DEB64
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] handshake: pre-decode packno: 23
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX packet #23 SHORT, size: 33; ecn: 0, spin: 0; path: 0; Q: 0; L: 0
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] conn: about to process QUIC_FRAME_ACK frame
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] event: RX ACK frame: [22-16]
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Saved ACK
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] qlog: [288459693382,"TRANSPORT","PACKET_RX","LINE",{"raw":"4789c42d85d463334e1a9a00922441403f689cc9e882784177d63ee3c0b34f","header":{"type":"SHORT","payload_length":"17","packet_number":"23"},"frames":[{"frame_type":"ACK"}]}]
+19:00:30.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HTA' -> 'HA'
+19:00:30.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HA' -> 'H'
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] conn: Processing ACK
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Got ACK frame, largest acked: 22; delta: 1120
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: ACK comes after a period of quiescence
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: was quiet
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: Smallest unacked: 22
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: acking via regular record #22
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: packno 22; rtt: 1702; delta: 1120; new srtt: 1026
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: clear sc_n_consec_rtos, sc_n_hsk, sc_ntlp
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: No retransmittable packets: clear alarm
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: end_ack; mode: STARTUP; in_flight: 0
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: up round count to 13; new rt end: 22
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: last sample app limited: full BW not reached
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] bbr: BW estimate: 2871672
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: add stream 0
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] hpi: read-0: lsquic_hpi_next: return stream 0, incr: 0, priority 8
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: pacer blocked: 0, in_flight_all: 0
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288459693465
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: send_ctl_can_send: sc_flags: 0x3848DC, b_out: 0 = (0 + 0); b_retx: 0; cwnd: 48340; ccfc: 0/1572864; n_scheduled: 0, n_in_flight_all: 0; pa_burst: 9; pa_next: 0; pa_now: 288459693465
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] pacer: lsquic_pacer_can_schedule: 1
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] sendctl: app-limited
+19:00:30.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HK'
+19:00:30.402 [DEBUG] engine: decref conn 89C42D85D463334E, 'HK' -> 'H'
+19:00:30.402 [DEBUG] [QUIC:89C42D85D463334E] conn: not tickable
+19:00:30.402 [DEBUG] engine: incref conn 89C42D85D463334E, 'H' -> 'HA'

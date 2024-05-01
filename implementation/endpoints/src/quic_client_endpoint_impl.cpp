@@ -407,26 +407,27 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
     {
         std::lock_guard<std::mutex> its_lock(socket_mutex_);
         if (quic_stream.is_open()) {
-            // boost::asio::async_write(
-            //     *socket_,
-            //     boost::asio::buffer(*_entry.first),
-            //     std::bind(
-            //         &quic_client_endpoint_impl::write_completion_condition,
-            //         std::static_pointer_cast<quic_client_endpoint_impl>(shared_from_this()),
-            //         std::placeholders::_1,
-            //         std::placeholders::_2,
-            //         _entry.first->size(),
-            //         its_service, its_method, its_client, its_session,
-            //         std::chrono::steady_clock::now()),
-            //     strand_.wrap(
-            //         std::bind(
-            //         &quic_client_endpoint_base_impl::send_cbk,
-            //         shared_from_this(),
-            //         std::placeholders::_1,
-            //         std::placeholders::_2,
-            //         _entry.first
-            //     ))
-            // );
+            boost::asio::async_write(
+                //if quic_stream could really passed as socket
+                quic_stream,
+                boost::asio::buffer(*_entry.first),
+                std::bind(
+                    &quic_client_endpoint_impl::write_completion_condition,
+                    std::static_pointer_cast<quic_client_endpoint_impl>(shared_from_this()),
+                    std::placeholders::_1,
+                    std::placeholders::_2,
+                    _entry.first->size(),
+                    its_service, its_method, its_client, its_session,
+                    std::chrono::steady_clock::now()),
+                strand_.wrap(
+                    std::bind(
+                    &quic_client_endpoint_base_impl::send_cbk,
+                    shared_from_this(),
+                    std::placeholders::_1,
+                    std::placeholders::_2,
+                    _entry.first
+                ))
+            );
             
         }
     }
@@ -438,7 +439,7 @@ void quic_client_endpoint_impl::get_configured_times_from_endpoint(
         service_t _service, method_t _method,
         std::chrono::nanoseconds *_debouncing,
         std::chrono::nanoseconds *_maximum_retention) const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     configuration_->get_configured_timing_requests(_service,
             remote_address_.to_string(), remote_port_, _method,
             _debouncing, _maximum_retention);
