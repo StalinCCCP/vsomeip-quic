@@ -95,6 +95,7 @@ quic_server_endpoint_impl::quic_server_endpoint_impl(
 
 #if defined(__linux__) || defined(ANDROID) || defined(__QNX__)
     // If specified, bind to device
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::string its_device(configuration_->get_device());
 
     // disabled
@@ -114,7 +115,7 @@ quic_server_endpoint_impl::quic_server_endpoint_impl(
     if (ec)
         VSOMEIP_ERROR << __func__
             << ": bind failed (" << ec.message() << ")";
-
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     quic_acceptor.listen(boost::asio::socket_base::max_connections);
     if (ec)
         VSOMEIP_ERROR << __func__

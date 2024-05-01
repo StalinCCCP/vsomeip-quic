@@ -264,6 +264,7 @@ std::shared_ptr<endpoint> endpoint_manager_impl::create_server_endpoint(
                         boost::asio::ip::udp::endpoint(its_unicast, _port),
                         io_,
                         configuration_);
+                VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
                 if (configuration_->has_enabled_magic_cookies(
                         its_unicast_str, _port) ||
                         configuration_->has_enabled_magic_cookies(
