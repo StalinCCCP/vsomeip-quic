@@ -101,7 +101,7 @@ void quic_client_endpoint_impl::restart(bool _force) {
                 self->aborted_restart_count_++;
                 return;
             } else {
-                VSOMEIP_WARNING << "tce::restart: maximum number of aborted restarts ["
+                VSOMEIP_WARNING << "qce::restart: maximum number of aborted restarts ["
                         << self->quic_restart_aborts_max_ << "] reached! its_connect_duration: "
                         << its_connect_duration;
             }
@@ -131,7 +131,7 @@ void quic_client_endpoint_impl::restart(bool _force) {
                 const session_t its_session = VSOMEIP_BYTES_TO_WORD(
                         (*q.first)[VSOMEIP_SESSION_POS_MIN],
                         (*q.first)[VSOMEIP_SESSION_POS_MAX]);
-                VSOMEIP_WARNING << "tce::restart: dropping message: "
+                VSOMEIP_WARNING << "qce::restart: dropping message: "
                         << "remote:" << self->get_address_port_remote() << " ("
                         << std::hex << std::setfill('0')
                         << std::setw(4) << its_client << "): ["
@@ -143,7 +143,7 @@ void quic_client_endpoint_impl::restart(bool _force) {
             self->queue_.clear();
             self->queue_size_ = 0;
         }
-        VSOMEIP_WARNING << "tce::restart: local: " << address_port_local
+        VSOMEIP_WARNING << "qce::restart: local: " << address_port_local
                 << " remote: " << self->get_address_port_remote();
         self->start_connect_timer();
     };
@@ -202,6 +202,7 @@ void quic_client_endpoint_impl::connect() {
 #if defined(__linux__) || defined(ANDROID) || defined(__QNX__)
         // If specified, bind to device
         std::string its_device(configuration_->get_device());
+        VSOMEIP_DEBUG<<std::string("device is ")+its_device;
         if (its_device != "") {
             //it's unknown why native_handle() is not const
             //it's unknown if it will lead the program to crash
@@ -233,13 +234,13 @@ void quic_client_endpoint_impl::connect() {
         //             // set new client port depending on service / instance / remote port
         //             if (!its_host->on_bind_error(shared_from_this(), remote_address_, remote_port_)) {
         //                 VSOMEIP_WARNING << "tcp_client_endpoint::connect: "
-        //                         "Failed to set new local port for tce: "
+        //                         "Failed to set new local port for qce: "
         //                         << " local: " << local_.address().to_string()
         //                         << ":" << std::dec << local_.port()
         //                         << " remote:" << get_address_port_remote();
         //             } else {
         //                 VSOMEIP_INFO << "tcp_client_endpoint::connect: "
-        //                         "Using new new local port for tce: "
+        //                         "Using new new local port for qce: "
         //                         << " local: " << local_.address().to_string()
         //                         << ":" << std::dec << local_.port()
         //                         << " remote:" << get_address_port_remote();
@@ -397,7 +398,7 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
 
 #if 0
     std::stringstream msg;
-    msg << "tcei<" << remote_.address() << ":"
+    msg << "qcei<" << remote_.address() << ":"
         << std::dec << remote_.port()  << ">::sq: ";
     for (std::size_t i = 0; i < _buffer->size(); i++)
         msg << std::hex << std::setw(2) << std::setfill('0')
@@ -407,6 +408,8 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
     {
         std::lock_guard<std::mutex> its_lock(socket_mutex_);
         if (quic_stream.is_open()) {
+
+
             boost::asio::async_write(
                 //if quic_stream could really passed as socket
                 quic_stream,
@@ -428,7 +431,16 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
                     _entry.first
                 ))
             );
-            
+
+            // couldn't implement boost::asio::async_write on nexus ,write_completion_condition ignored.
+            // quic_stream.async_write_some(boost::asio::buffer(*_entry.first), 
+            //     strand_.wrap(std::bind(
+            //         &quic_client_endpoint_base_impl::send_cbk,
+            //         shared_from_this(),
+            //         std::placeholders::_1,
+            //         std::placeholders::_2,
+            //         _entry.first
+            //     )));
         }
     }
 }
@@ -518,7 +530,8 @@ std::size_t quic_client_endpoint_impl::write_completion_condition(
         client_t _client, session_t _session,
         const std::chrono::steady_clock::time_point _start) {
     VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
-
+    // forced flush, should be replaced if the right we know how to make it really works
+    quic_stream.flush();
     if (_error) {
         VSOMEIP_ERROR << "qce::write_completion_condition: "
                 << _error.message() << "(" << std::dec << _error.value()
@@ -600,7 +613,8 @@ void quic_client_endpoint_impl::send_magic_cookie(message_buffer_ptr_t &_buffer)
 void quic_client_endpoint_impl::receive_cbk(
         boost::system::error_code const &_error, std::size_t _bytes,
         const message_buffer_ptr_t& _recv_buffer, std::size_t _recv_buffer_size) {
-            VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+            VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
+            //VSOMEIP_ERROR<<_error.message();
     if (_error == boost::asio::error::operation_aborted) {
         // endpoint was stopped
         return;
@@ -619,7 +633,7 @@ void quic_client_endpoint_impl::receive_cbk(
         std::uint32_t its_missing_capacity(0);
         if (!_error && 0 < _bytes) {
             if (_recv_buffer_size + _bytes > _recv_buffer->size()) {
-                VSOMEIP_ERROR << "receive buffer overflow in tcp client endpoint ~> abort!";
+                VSOMEIP_ERROR << "receive buffer overflow in quic client endpoint ~> abort!";
                 return;
             }
             _recv_buffer_size += _bytes;
@@ -728,7 +742,7 @@ void quic_client_endpoint_impl::receive_cbk(
                         } else if (!utility::is_valid_message_type(static_cast<message_type_e>(
                                 (*recv_buffer_)[its_iteration_gap + VSOMEIP_MESSAGE_TYPE_POS]))) {
                             invalid_parameter_detected = true;
-                            VSOMEIP_ERROR << "tce: Invalid message type: 0x"
+                            VSOMEIP_ERROR << "qce: Invalid message type: 0x"
                                     << std::hex << std::setw(2) << std::setfill('0')
                                     << std::uint32_t((*recv_buffer_)[its_iteration_gap + VSOMEIP_MESSAGE_TYPE_POS])
                                     << " local: " << get_address_port_local()
@@ -736,7 +750,7 @@ void quic_client_endpoint_impl::receive_cbk(
                         } else if (!utility::is_valid_return_code(static_cast<return_code_e>(
                                 (*recv_buffer_)[its_iteration_gap + VSOMEIP_RETURN_CODE_POS]))) {
                             invalid_parameter_detected = true;
-                            VSOMEIP_ERROR << "tce: Invalid return code: 0x"
+                            VSOMEIP_ERROR << "qce: Invalid return code: 0x"
                                     << std::hex << std::setw(2) << std::setfill('0')
                                     << std::uint32_t((*recv_buffer_)[its_iteration_gap + VSOMEIP_RETURN_CODE_POS])
                                     << " local: " << get_address_port_local()
@@ -992,7 +1006,9 @@ std::string quic_client_endpoint_impl::get_remote_information() const {
 void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error,
                                         std::size_t _bytes,
                                         const message_buffer_ptr_t& _sent_msg) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
+
+
     (void)_bytes;
 
     std::lock_guard<std::recursive_mutex> its_lock(mutex_);
@@ -1023,7 +1039,7 @@ void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error
         is_sending_ = false;
 
         if (_error == boost::system::errc::destination_address_required) {
-            VSOMEIP_WARNING << "tce::send_cbk received error: " << _error.message()
+            VSOMEIP_WARNING << "qce::send_cbk received error: " << _error.message()
                     << " (" << std::dec << _error.value() << ") "
                             << get_remote_information();
             was_not_connected_ = true;
@@ -1032,7 +1048,7 @@ void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error
             shutdown_and_close_socket(false);
         } else {
             if (state_ == cei_state_e::CONNECTING) {
-                VSOMEIP_WARNING << "tce::send_cbk endpoint is already restarting:"
+                VSOMEIP_WARNING << "qce::send_cbk endpoint is already restarting:"
                         << get_remote_information();
             } else {
                 state_ = cei_state_e::CONNECTING;
@@ -1061,7 +1077,7 @@ void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error
                         (*_sent_msg)[VSOMEIP_SESSION_POS_MIN],
                         (*_sent_msg)[VSOMEIP_SESSION_POS_MAX]);
             }
-            VSOMEIP_WARNING << "tce::send_cbk received error: "
+            VSOMEIP_WARNING << "qce::send_cbk received error: "
                     << _error.message() << " (" << std::dec
                     << _error.value() << ") " << get_remote_information()
                     << " " << std::dec << queue_.size()
@@ -1099,7 +1115,7 @@ void quic_client_endpoint_impl::wait_until_sent(const boost::system::error_code 
         its_lock.unlock();
         if (!_error)
             VSOMEIP_WARNING << __func__
-                << ": Maximum wait time for send operation exceeded for tce.";
+                << ": Maximum wait time for send operation exceeded for qce.";
 
         std::shared_ptr<endpoint_host> its_ep_host = endpoint_host_.lock();
         its_ep_host->on_disconnect(shared_from_this());

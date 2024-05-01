@@ -34,7 +34,7 @@ void run() {
         request->set_payload(its_payload);
         //auto now = std::chrono::system_clock::now();
 	time_before_request=std::chrono::steady_clock::now();
-	for(int i=0;i<1000;i++)
+	for(int i=0;i<5;i++)
 		app->send(request);
 }
 

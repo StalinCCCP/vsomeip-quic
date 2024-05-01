@@ -946,6 +946,8 @@ quic_server_endpoint_impl::connection::write_completion_condition(
         std::size_t _bytes_transferred, std::size_t _bytes_to_send,
         service_t _service, method_t _method, client_t _client, session_t _session,
         const std::chrono::steady_clock::time_point _start) {
+        // forced flush, should be replaced if the right we know how to make it really works
+        quic_stream.flush();
     if (_error) {
         VSOMEIP_ERROR << "tse::write_completion_condition: "
                 << _error.message() << "(" << std::dec << _error.value()
