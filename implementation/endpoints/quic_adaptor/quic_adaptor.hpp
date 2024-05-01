@@ -11,7 +11,7 @@ class quic_server_adaptor{
     using endpoint=boost::asio::ip::udp::endpoint;
     using socket=boost::asio::ip::udp::socket;
 };
-#define disable_async
+//#define disable_async
 // class quic_global_init{
 //     public:
 //     static nexus::global::context global;//nexus::global::init_client_server(); 
