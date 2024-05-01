@@ -142,12 +142,11 @@ void quic_server_endpoint_impl::start() {
 
     {
         std::unique_lock<std::mutex> its_socket_lock(new_connection->get_socket_lock());
-        quic_acceptor.async_accept(*new_connection->get_quic_connection(),
-                std::bind(&quic_server_endpoint_impl::accept_cbk,
+        quic_acceptor.accept(*new_connection->get_quic_connection());
+        new_connection->get_quic_connection()->async_accept(*new_connection->get_quic_stream(),std::bind(&quic_server_endpoint_impl::accept_cbk,
                         std::dynamic_pointer_cast<quic_server_endpoint_impl>(
                                 shared_from_this()), new_connection,
                         std::placeholders::_1));
-        new_connection->get_quic_connection()->accept(*new_connection->get_quic_stream());
     }
     //}
 }
