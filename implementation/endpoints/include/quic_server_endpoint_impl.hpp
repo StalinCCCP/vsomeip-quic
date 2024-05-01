@@ -92,7 +92,7 @@ private:
         std::string get_address_port_remote() const;
         std::size_t get_recv_buffer_capacity() const;
         nexus::quic::connection* get_quic_connection();
-
+        nexus::quic::stream* get_quic_stream();
     private:
         connection(const std::weak_ptr<quic_server_endpoint_impl>& _server,
                    std::uint32_t _max_message_size,

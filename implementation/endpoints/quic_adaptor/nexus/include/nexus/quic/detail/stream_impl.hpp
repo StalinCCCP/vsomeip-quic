@@ -3,6 +3,7 @@
 #include <boost/asio/any_io_executor.hpp>
 #include <boost/asio/buffers_iterator.hpp>
 
+#include <iostream>
 #include <nexus/quic/detail/operation.hpp>
 #include <nexus/quic/detail/service.hpp>
 #include <nexus/quic/detail/stream_state.hpp>

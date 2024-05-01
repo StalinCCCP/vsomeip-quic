@@ -1,9 +1,12 @@
+#include <boost/system/error_code.hpp>
+#include <iostream>
 #include <nexus/quic/detail/stream_state.hpp>
 #include <nexus/quic/detail/connection_impl.hpp>
 #include <nexus/quic/detail/socket_impl.hpp>
 #include <nexus/quic/detail/engine_impl.hpp>
 #include <lsquic/lsquic.h>
 
+#include "nexus/quic/error.hpp"
 #include "recv_header_set.hpp"
 
 namespace nexus::quic::detail {
@@ -153,13 +156,17 @@ void read_header(variant& state, lsquic_stream* handle, header_operation& op)
 void read_body(variant& state, lsquic_stream* handle, data_operation& op)
 {
   if (!std::holds_alternative<expecting_body>(state)) {
+    std::cout<<__PRETTY_FUNCTION__<<"encounters invalid argument\n";
+
     op.post(make_error_code(errc::invalid_argument), 0);
     return;
   }
   if (::lsquic_stream_wantread(handle, 1) == -1) {
+      std::cout<<__PRETTY_FUNCTION__<<"encounters error\n";
     op.post(error_code{errno, system_category()}, 0);
     return;
   }
+  std::cout<<__PRETTY_FUNCTION__<<"running properly\n";
   state = body{&op};
 }
 
@@ -298,14 +305,18 @@ void on_accept(variant& state, lsquic_stream* handle, bool is_http)
 bool read(variant& state, stream_data_operation& op)
 {
   if (std::holds_alternative<error>(state)) {
+    std::cout<<__PRETTY_FUNCTION__<<"encounters error\n";
     op.post(std::get_if<error>(&state)->ec, 0);
     state = closed{};
     return false;
   } else if (std::holds_alternative<open>(state)) {
+    std::cout<<__PRETTY_FUNCTION__<<"properly running\n";
     auto& o = *std::get_if<open>(&state);
     receiving_stream_state::read_body(o.in, &o.handle, op);
+    //op.post(error_code(),0);
     return true;
   } else {
+    std::cout<<__PRETTY_FUNCTION__<<"encounters bad file descriptor error\n";
     op.post(make_error_code(errc::bad_file_descriptor), 0);
     return false;
   }

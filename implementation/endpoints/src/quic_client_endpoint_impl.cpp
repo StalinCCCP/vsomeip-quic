@@ -353,6 +353,7 @@ void quic_client_endpoint_impl::receive(message_buffer_ptr_t  _recv_buffer,
             // don't start receiving again
             return;
         }
+        #ifndef disable_async
         quic_stream.async_read_some(
             boost::asio::buffer(&(*_recv_buffer)[_recv_buffer_size], buffer_size),
             strand_.wrap(
@@ -366,6 +367,9 @@ void quic_client_endpoint_impl::receive(message_buffer_ptr_t  _recv_buffer,
                 )
             )
         );
+        #else
+        quic_stream.read_some(boost::asio::buffer(&(*_recv_buffer)[_recv_buffer_size], buffer_size));
+        #endif
     }
 }
 
@@ -409,7 +413,7 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
         std::lock_guard<std::mutex> its_lock(socket_mutex_);
         if (quic_stream.is_open()) {
 
-
+            #ifndef disable_async
             boost::asio::async_write(
                 //if quic_stream could really passed as socket
                 quic_stream,
@@ -431,7 +435,10 @@ void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint
                     _entry.first
                 ))
             );
-
+            #else
+            quic_stream.write_some(boost::asio::buffer(*_entry.first));
+            quic_stream.flush();
+            #endif
             // couldn't implement boost::asio::async_write on nexus ,write_completion_condition ignored.
             // quic_stream.async_write_some(boost::asio::buffer(*_entry.first), 
             //     strand_.wrap(std::bind(
@@ -531,7 +538,11 @@ std::size_t quic_client_endpoint_impl::write_completion_condition(
         const std::chrono::steady_clock::time_point _start) {
     VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     // forced flush, should be replaced if the right we know how to make it really works
-    quic_stream.flush();
+    boost::system::error_code ec;
+    quic_stream.flush(ec);
+    if(ec){
+        VSOMEIP_ERROR<<ec.message();
+    }
     if (_error) {
         VSOMEIP_ERROR << "qce::write_completion_condition: "
                 << _error.message() << "(" << std::dec << _error.value()
@@ -609,7 +620,20 @@ void quic_client_endpoint_impl::send_magic_cookie(message_buffer_ptr_t &_buffer)
         VSOMEIP_WARNING << "Packet full. Cannot insert magic cookie!";
     }
 }
+#include <execinfo.h>
+void printStackTrace() {
+    const int max_frames = 64;
+    void* callstack[max_frames];
+    int frames = backtrace(callstack, max_frames);
+    char** symbols = backtrace_symbols(callstack, frames);
 
+    if (symbols) {
+        for (int i = 0; i < frames; ++i) {
+            std::cout << symbols[i] << std::endl;
+        }
+        free(symbols); // Remember to free the memory allocated by backtrace_symbols
+    }
+}
 void quic_client_endpoint_impl::receive_cbk(
         boost::system::error_code const &_error, std::size_t _bytes,
         const message_buffer_ptr_t& _recv_buffer, std::size_t _recv_buffer_size) {
@@ -859,6 +883,7 @@ void quic_client_endpoint_impl::receive_cbk(
                     << _error.message() << "(" << std::dec << _error.value()
                     << ") local: " << get_address_port_local()
                     << " remote: " << get_address_port_remote();
+            //printStackTrace();
             if (_error ==  boost::asio::error::eof ||
                     _error == boost::asio::error::timed_out ||
                     _error == boost::asio::error::bad_descriptor ||

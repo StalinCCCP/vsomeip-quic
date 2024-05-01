@@ -18,6 +18,7 @@
 #include "nexus/quic/connection.hpp"
 #include "nexus/quic/server.hpp"
 #include "nexus/quic/settings.hpp"
+#include "nexus/quic/stream.hpp"
 #include "openssl/ssl.h"
 
 #include <map>
@@ -143,6 +144,7 @@ void quic_server_endpoint_impl::start() {
                         std::dynamic_pointer_cast<quic_server_endpoint_impl>(
                                 shared_from_this()), new_connection,
                         std::placeholders::_1));
+        new_connection->get_quic_connection()->accept(*new_connection->get_quic_stream());
     }
     //}
 }
@@ -443,7 +445,10 @@ nexus::quic::connection*
 quic_server_endpoint_impl::connection::get_quic_connection(){
     return &quic_conn;
 }
-
+nexus::quic::stream*
+quic_server_endpoint_impl::connection::get_quic_stream(){
+    return &quic_stream;
+}
 void quic_server_endpoint_impl::connection::start() {
     receive();
 }
@@ -494,10 +499,14 @@ void quic_server_endpoint_impl::connection::receive() {
             // don't start receiving again
             return;
         }
+        #ifndef disable_async
         quic_stream.async_read_some(boost::asio::buffer(&recv_buffer_[recv_buffer_size_], left_buffer_size),
                 std::bind(&quic_server_endpoint_impl::connection::receive_cbk,
                         shared_from_this(), std::placeholders::_1,
                         std::placeholders::_2));
+        #else
+        quic_stream.read_some(boost::asio::buffer(&recv_buffer_[recv_buffer_size_], left_buffer_size));
+        #endif
     }
 }
 
@@ -547,7 +556,7 @@ void quic_server_endpoint_impl::connection::send_queued(
     {
         std::lock_guard<std::mutex> its_lock(socket_mutex_);
         _it->second.is_sending_ = true;
-
+        #ifndef disable_async
         boost::asio::async_write(quic_stream, boost::asio::buffer(*its_buffer),
                  std::bind(&quic_server_endpoint_impl::connection::write_completion_condition,
                            shared_from_this(),
@@ -561,6 +570,10 @@ void quic_server_endpoint_impl::connection::send_queued(
                           _it->first,
                           std::placeholders::_1,
                           std::placeholders::_2));
+        #else
+        quic_stream.write_some(boost::asio::buffer(*its_buffer));
+        quic_stream.flush();
+        #endif
     }
 }
 
@@ -947,7 +960,11 @@ quic_server_endpoint_impl::connection::write_completion_condition(
         service_t _service, method_t _method, client_t _client, session_t _session,
         const std::chrono::steady_clock::time_point _start) {
         // forced flush, should be replaced if the right we know how to make it really works
-        quic_stream.flush();
+    boost::system::error_code ec;
+    quic_stream.flush(ec);
+    if(ec){
+        VSOMEIP_ERROR<<ec.message();
+    }
     if (_error) {
         VSOMEIP_ERROR << "tse::write_completion_condition: "
                 << _error.message() << "(" << std::dec << _error.value()
