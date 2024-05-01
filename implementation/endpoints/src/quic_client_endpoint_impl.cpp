@@ -65,6 +65,7 @@ quic_client_endpoint_impl::quic_client_endpoint_impl(
         VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     is_supporting_magic_cookies_ = true;
     ssl.set_verify_mode(boost::asio::ssl::verify_peer);
+    ::SSL_CTX_set_verify(ssl.native_handle(), SSL_VERIFY_NONE, NULL);
     ::SSL_CTX_set_min_proto_version(ssl.native_handle(), TLS1_3_VERSION);
     ::SSL_CTX_set_max_proto_version(ssl.native_handle(), TLS1_3_VERSION);
     static const unsigned char alpn[]={7,'v','s','o','m','e','i','p'};
