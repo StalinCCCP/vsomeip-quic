@@ -117,6 +117,7 @@ quic_server_endpoint_impl::quic_server_endpoint_impl(
             << ": bind failed (" << ec.message() << ")";
     VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     quic_acceptor.listen(boost::asio::socket_base::max_connections);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     if (ec)
         VSOMEIP_ERROR << __func__
             << ": listen failed (" << ec.message() << ")";
