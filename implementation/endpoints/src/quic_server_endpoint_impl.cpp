@@ -5,6 +5,7 @@
 // file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 #include <boost/asio/ssl/context.hpp>
+#include <boost/system/error_code.hpp>
 #include <iomanip>
 
 #include <boost/asio/write.hpp>
@@ -142,11 +143,15 @@ void quic_server_endpoint_impl::start() {
 
     {
         std::unique_lock<std::mutex> its_socket_lock(new_connection->get_socket_lock());
-        quic_acceptor.accept(*new_connection->get_quic_connection());
-        new_connection->get_quic_connection()->async_accept(*new_connection->get_quic_stream(),std::bind(&quic_server_endpoint_impl::accept_cbk,
+        quic_acceptor.async_accept(*new_connection->get_quic_connection(),[&new_connection,this](boost::system::error_code ec){
+            if(ec){
+                VSOMEIP_ERROR<<"accept failed with "<<ec.message();
+                return;
+            }
+            new_connection->get_quic_connection()->async_accept(*new_connection->get_quic_stream(),std::bind(&quic_server_endpoint_impl::accept_cbk,
                         std::dynamic_pointer_cast<quic_server_endpoint_impl>(
                                 shared_from_this()), new_connection,
-                        std::placeholders::_1));
+                        std::placeholders::_1));        });
     }
     //}
 }

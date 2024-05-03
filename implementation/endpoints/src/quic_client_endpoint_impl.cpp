@@ -160,9 +160,10 @@ void quic_client_endpoint_impl::connect() {
     //     quic_conn.connect(quic_stream,its_error);
     // quic_stream analogue to tcp socket
     //socket_->open(remote_.protocol(), its_error);
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     quic_client.connect(quic_conn, remote_, remote_address_.to_string().c_str());
-    VSOMEIP_DEBUG<<"quic_client.connect complete";
+
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<"quic_client.connect complete";
     //dbg=dbg();
     if (!its_error || its_error == boost::asio::error::already_open) {
 
