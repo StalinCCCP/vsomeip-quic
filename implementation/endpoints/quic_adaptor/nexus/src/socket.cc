@@ -1,3 +1,4 @@
+#include "vsomeip/internal/logger.hpp"
 #include <nexus/quic/socket.hpp>
 #include <nexus/quic/detail/engine_impl.hpp>
 #include <nexus/quic/detail/socket_impl.hpp>
@@ -106,6 +107,7 @@ void socket_impl::accept(connection_impl& c, accept_operation& op)
     ::lsquic_conn_set_ctx(incoming.handle, ctx);
     connection_state::accept_incoming(c.state, std::move(incoming));
     op.post(error_code{}); // success
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<":"<<"success";
     return;
   }
   connection_state::accept(c.state, op);
