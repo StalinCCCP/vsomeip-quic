@@ -180,3 +180,5 @@
 *.swp
 **/CMakeCache.txt
 **/*.log
+**/clientup.sh
+
