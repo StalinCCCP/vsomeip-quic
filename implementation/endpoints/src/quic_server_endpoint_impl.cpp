@@ -135,6 +135,7 @@ void quic_server_endpoint_impl::start() {
     std::lock_guard<std::mutex> its_lock(acceptor_mutex_);
     // quic_acceptor must be opened
     //if (quic_stream.is_open()) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     connection::ptr new_connection = connection::create(
             std::dynamic_pointer_cast<quic_server_endpoint_impl>(
                     shared_from_this()), max_message_size_,
@@ -144,19 +145,21 @@ void quic_server_endpoint_impl::start() {
     {
         std::unique_lock<std::mutex> its_socket_lock(new_connection->get_socket_lock());
         quic_acceptor.async_accept(*new_connection->get_quic_connection(),[&new_connection,this](boost::system::error_code ec){
-            if(ec){
-                VSOMEIP_ERROR<<"accept failed with "<<ec.message();
-                return;
-            }
-            new_connection->get_quic_connection()->async_accept(*new_connection->get_quic_stream(),std::bind(&quic_server_endpoint_impl::accept_cbk,
-                        std::dynamic_pointer_cast<quic_server_endpoint_impl>(
-                                shared_from_this()), new_connection,
-                        std::placeholders::_1));        });
+                if(ec){
+                    VSOMEIP_ERROR<<"accept failed with "<<ec.message();
+                    return;
+                }
+                new_connection->get_quic_connection()->async_accept(*new_connection->get_quic_stream(),std::bind(&quic_server_endpoint_impl::accept_cbk,
+                            std::dynamic_pointer_cast<quic_server_endpoint_impl>(
+                                    shared_from_this()), new_connection,
+                            std::placeholders::_1));        
+            });
     }
     //}
 }
 
 void quic_server_endpoint_impl::stop() {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     server_endpoint_impl::stop();
     {
         std::lock_guard<std::mutex> its_lock(acceptor_mutex_);
@@ -177,6 +180,8 @@ void quic_server_endpoint_impl::stop() {
 bool quic_server_endpoint_impl::send_to(
         const std::shared_ptr<endpoint_definition> _target,
         const byte_t *_data,  uint32_t _size) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     std::lock_guard<std::mutex> its_lock(mutex_);
     endpoint_type its_target(_target->get_address(), _target->get_port());
     return send_intern(its_target, _data, _size);
@@ -187,6 +192,8 @@ bool quic_server_endpoint_impl::send_error(
         const byte_t *_data, uint32_t _size) {
     bool ret(false);
     std::lock_guard<std::mutex> its_lock(mutex_);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     const endpoint_type its_target(_target->get_address(), _target->get_port());
     const auto its_target_iterator(find_or_create_target_unlocked(its_target));
     auto &its_data = its_target_iterator->second;
@@ -208,6 +215,8 @@ bool quic_server_endpoint_impl::send_error(
 bool quic_server_endpoint_impl::send_queued(const target_data_iterator_type _it) {
 
     bool must_erase(false);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     connection::ptr its_connection;
     {
         std::lock_guard<std::mutex> its_lock(connections_mutex_);
@@ -269,6 +278,8 @@ void quic_server_endpoint_impl::get_configured_times_from_endpoint(
         service_t _service, method_t _method,
         std::chrono::nanoseconds *_debouncing,
         std::chrono::nanoseconds *_maximum_retention) const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     configuration_->get_configured_timing_responses(_service,
             quic_server_endpoint_base_impl::local_.address().to_string(),
             quic_server_endpoint_base_impl::local_.port(), _method,
@@ -280,6 +291,8 @@ bool quic_server_endpoint_impl::is_established_to(const std::shared_ptr<endpoint
     endpoint_type endpoint(_endpoint->get_address(), _endpoint->get_port());
     {
         std::lock_guard<std::mutex> its_lock(connections_mutex_);
+        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
         auto connection_iterator = connections_.find(endpoint);
         if (connection_iterator != connections_.end()) {
             is_connected = true;
@@ -299,6 +312,8 @@ bool quic_server_endpoint_impl::get_default_target(service_t,
 
 void quic_server_endpoint_impl::remove_connection(
         quic_server_endpoint_impl::connection *_connection) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     std::lock_guard<std::mutex> its_lock(connections_mutex_);
     for (auto it = connections_.begin(); it != connections_.end();) {
         if (it->second.get() == _connection) {
@@ -312,6 +327,8 @@ void quic_server_endpoint_impl::remove_connection(
 
 void quic_server_endpoint_impl::accept_cbk(const connection::ptr& _connection,
         boost::system::error_code const &_error) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     VSOMEIP_DEBUG<<_error.message();
     if (!_error) {
         boost::system::error_code its_error;
@@ -365,6 +382,7 @@ void quic_server_endpoint_impl::accept_cbk(const connection::ptr& _connection,
 }
 
 std::uint16_t quic_server_endpoint_impl::get_local_port() const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     return local_port_;
 }
@@ -412,6 +430,8 @@ quic_server_endpoint_impl::connection::connection(
 quic_server_endpoint_impl::connection::~connection() {
 
     auto its_server(server_.lock());
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (its_server) {
         auto its_routing_host(its_server->routing_host_.lock());
         if (its_routing_host) {
@@ -431,6 +451,8 @@ quic_server_endpoint_impl::connection::create(
         boost::asio::io_context &_io,
         std::chrono::milliseconds _send_timeout,
         nexus::quic::acceptor& quic_acceptor) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     const std::uint32_t its_initial_receveive_buffer_size =
             VSOMEIP_SOMEIP_HEADER_SIZE + 8 + MAGIC_COOKIE_SIZE + 8;
     return ptr(new connection(_server, _max_message_size,
@@ -462,6 +484,8 @@ void quic_server_endpoint_impl::connection::start() {
 
 void quic_server_endpoint_impl::connection::receive() {
     std::lock_guard<std::mutex> its_lock(socket_mutex_);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if(quic_stream.is_open()) {
         const std::size_t its_capacity(recv_buffer_.capacity());
         if (recv_buffer_size_ > its_capacity) {
@@ -519,6 +543,8 @@ void quic_server_endpoint_impl::connection::receive() {
 
 void quic_server_endpoint_impl::connection::stop() {
     std::lock_guard<std::mutex> its_lock(socket_mutex_);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (quic_stream.is_open()) {
         boost::system::error_code its_error;
         quic_stream.shutdown(socket_.shutdown_both, its_error);
@@ -528,6 +554,7 @@ void quic_server_endpoint_impl::connection::stop() {
 
 void quic_server_endpoint_impl::connection::send_queued(
         const target_data_iterator_type _it) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     std::shared_ptr<quic_server_endpoint_impl> its_server(server_.lock());
     if (!its_server) {
@@ -586,6 +613,8 @@ void quic_server_endpoint_impl::connection::send_queued(
 
 bool quic_server_endpoint_impl::connection::send_magic_cookie(
         message_buffer_ptr_t &_buffer) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (max_message_size_ == MESSAGE_SIZE_UNLIMITED
             || max_message_size_ - _buffer->size() >=
     VSOMEIP_SOMEIP_HEADER_SIZE + VSOMEIP_SOMEIP_MAGIC_COOKIE_SIZE) {
@@ -604,6 +633,8 @@ bool quic_server_endpoint_impl::connection::is_magic_cookie(size_t _offset) cons
 void quic_server_endpoint_impl::connection::receive_cbk(
         boost::system::error_code const &_error,
         std::size_t _bytes) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (_error == boost::asio::error::operation_aborted) {
         // endpoint was stopped
         return;
@@ -882,6 +913,8 @@ void quic_server_endpoint_impl::connection::receive_cbk(
 }
 
 void quic_server_endpoint_impl::connection::calculate_shrink_count() {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (buffer_shrink_threshold_) {
         if (recv_buffer_.capacity() != recv_buffer_size_initial_) {
             if (recv_buffer_size_ < (recv_buffer_.capacity() >> 1)) {
@@ -895,12 +928,16 @@ void quic_server_endpoint_impl::connection::calculate_shrink_count() {
 
 void quic_server_endpoint_impl::connection::set_remote_info(
         const endpoint_type &_remote) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     remote_ = _remote;
     remote_address_ = _remote.address();
     remote_port_ = _remote.port();
 }
 
 std::string quic_server_endpoint_impl::connection::get_address_port_remote() const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     std::string its_address_port;
     its_address_port.reserve(21);
     boost::system::error_code ec;
@@ -911,6 +948,8 @@ std::string quic_server_endpoint_impl::connection::get_address_port_remote() con
 }
 
 std::string quic_server_endpoint_impl::connection::get_address_port_local() const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     std::string its_address_port;
     its_address_port.reserve(21);
     boost::system::error_code ec;
@@ -927,6 +966,8 @@ std::string quic_server_endpoint_impl::connection::get_address_port_local() cons
 
 void quic_server_endpoint_impl::connection::handle_recv_buffer_exception(
         const std::exception &_e) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     std::stringstream its_message;
     its_message << "quic_server_endpoint_impl::connection catched exception"
             << _e.what() << " local: " << get_address_port_local()
@@ -966,6 +1007,8 @@ quic_server_endpoint_impl::connection::write_completion_condition(
         std::size_t _bytes_transferred, std::size_t _bytes_to_send,
         service_t _service, method_t _method, client_t _client, session_t _session,
         const std::chrono::steady_clock::time_point _start) {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
         // forced flush, should be replaced if the right we know how to make it really works
     boost::system::error_code ec;
     quic_stream.flush(ec);
@@ -1021,6 +1064,8 @@ quic_server_endpoint_impl::connection::write_completion_condition(
 
 void quic_server_endpoint_impl::connection::stop_and_remove_connection() {
     std::shared_ptr<quic_server_endpoint_impl> its_server(server_.lock());
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     if (!its_server) {
         VSOMEIP_ERROR << "tse::connection::stop_and_remove_connection "
                 " couldn't lock server_";
@@ -1040,6 +1085,8 @@ void quic_server_endpoint_impl::receive() {
 
 void quic_server_endpoint_impl::print_status() {
     std::lock_guard<std::mutex> its_lock(mutex_);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     connections_t its_connections;
     {
         std::lock_guard<std::mutex> its_lock(connections_mutex_);
@@ -1072,6 +1119,8 @@ void quic_server_endpoint_impl::print_status() {
 
 std::string quic_server_endpoint_impl::get_remote_information(
         const target_data_iterator_type _it) const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     boost::system::error_code ec;
     return _it->first.address().to_string(ec) + ":"
             + std::to_string(_it->first.port());
@@ -1079,6 +1128,8 @@ std::string quic_server_endpoint_impl::get_remote_information(
 
 std::string quic_server_endpoint_impl::get_remote_information(
         const endpoint_type& _remote) const {
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     boost::system::error_code ec;
     return _remote.address().to_string(ec) + ":"
             + std::to_string(_remote.port());
@@ -1098,6 +1149,8 @@ void quic_server_endpoint_impl::connection::wait_until_sent(const boost::system:
         return;
 
     std::lock_guard<std::mutex> its_lock(its_server->mutex_);
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+
     auto it = its_server->targets_.find(remote_);
     if (it != its_server->targets_.end()) {
         auto &its_data = it->second;
