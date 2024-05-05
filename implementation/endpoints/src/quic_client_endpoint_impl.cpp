@@ -540,7 +540,7 @@ std::size_t quic_client_endpoint_impl::write_completion_condition(
     //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     // forced flush, should be replaced if the right we know how to make it really works
     boost::system::error_code ec;
-    quic_stream.flush(ec);
+    //quic_stream.flush(ec);
     if(ec){
         VSOMEIP_ERROR<<ec.message();
     }
