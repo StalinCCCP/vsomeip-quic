@@ -37,9 +37,9 @@ context init(int flags, error_code& ec)
     ec = make_error_code(error::init_failed);
     return {}; // failure
   }
-  static lsquic_logger_if logger{detail::log};
-  ::lsquic_logger_init(&logger, nullptr, LLTS_HHMMSSMS);
-  ::lsquic_set_log_level("debug");
+  //static lsquic_logger_if logger{detail::log};
+  //::lsquic_logger_init(&logger, nullptr, LLTS_HHMMSSMS);
+  //::lsquic_set_log_level("debug");
 
   return ::lsquic_global_cleanup; // success
 }
