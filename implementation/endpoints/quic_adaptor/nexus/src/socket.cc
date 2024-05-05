@@ -113,8 +113,12 @@ void socket_impl::accept(connection_impl& c, accept_operation& op)
     VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<":success";
     return;
   }
+  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
   connection_state::accept(c.state, op);
+  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
   accepting_connections.push_back(c);
+  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+
   engine.process(lock);
 }
 
