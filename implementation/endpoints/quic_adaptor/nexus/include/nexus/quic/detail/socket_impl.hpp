@@ -72,6 +72,7 @@ struct socket_impl : boost::intrusive::list_base_hook<> {
   decltype(auto) async_accept(Connection& conn,
                               CompletionToken&& token) {
     auto& c = conn.impl;
+    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
     return boost::asio::async_initiate<CompletionToken, void(error_code)>(
         [this, &c] (auto h) {
           using Handler = std::decay_t<decltype(h)>;
