@@ -294,7 +294,7 @@ bool quic_server_endpoint_impl::is_established_to(const std::shared_ptr<endpoint
     endpoint_type endpoint(_endpoint->get_address(), _endpoint->get_port());
     {
         std::lock_guard<std::mutex> its_lock(connections_mutex_);
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
         auto connection_iterator = connections_.find(endpoint);
         if (connection_iterator != connections_.end()) {
@@ -330,9 +330,9 @@ void quic_server_endpoint_impl::remove_connection(
 
 void quic_server_endpoint_impl::accept_cbk(const connection::ptr& _connection,
         boost::system::error_code const &_error) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
-    VSOMEIP_DEBUG<<_error.message();
+    //VSOMEIP_DEBUG<<_error.message();
     if (!_error) {
         boost::system::error_code its_error;
         endpoint_type remote;
@@ -916,7 +916,7 @@ void quic_server_endpoint_impl::connection::receive_cbk(
 }
 
 void quic_server_endpoint_impl::connection::calculate_shrink_count() {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     if (buffer_shrink_threshold_) {
         if (recv_buffer_.capacity() != recv_buffer_size_initial_) {
@@ -951,7 +951,7 @@ std::string quic_server_endpoint_impl::connection::get_address_port_remote() con
 }
 
 std::string quic_server_endpoint_impl::connection::get_address_port_local() const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     std::string its_address_port;
     its_address_port.reserve(21);

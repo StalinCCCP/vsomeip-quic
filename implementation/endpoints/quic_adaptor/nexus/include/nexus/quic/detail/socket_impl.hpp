@@ -72,16 +72,16 @@ struct socket_impl : boost::intrusive::list_base_hook<> {
   decltype(auto) async_accept(Connection& conn,
                               CompletionToken&& token) {
     auto& c = conn.impl;
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
     return boost::asio::async_initiate<CompletionToken, void(error_code)>(
         [this, &c] (auto h) {
           using Handler = std::decay_t<decltype(h)>;
           using op_type = accept_async<Handler, executor_type>;
-          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+          //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           auto p = handler_allocate<op_type>(h, std::move(h), get_executor());
-          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+         // VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           auto op = handler_ptr<op_type, Handler>{p, &p->handler};
-          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+          //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           accept(c, *op);
           op.release(); // release ownership
         }, token);

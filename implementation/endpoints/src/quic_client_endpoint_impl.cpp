@@ -602,7 +602,7 @@ bool quic_client_endpoint_impl::is_reliable() const {
 
 bool quic_client_endpoint_impl::is_magic_cookie(const message_buffer_ptr_t& _recv_buffer,
                                                size_t _offset) const {
-                                                VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+                                                //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     return (0 == std::memcmp(SERVICE_COOKIE, &(*_recv_buffer)[_offset], sizeof(SERVICE_COOKIE)));
 }
 
@@ -638,7 +638,7 @@ void printStackTrace() {
 void quic_client_endpoint_impl::receive_cbk(
         boost::system::error_code const &_error, std::size_t _bytes,
         const message_buffer_ptr_t& _recv_buffer, std::size_t _recv_buffer_size) {
-            VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
+            //VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
             //VSOMEIP_ERROR<<_error.message();
     if (_error == boost::asio::error::operation_aborted) {
         // endpoint was stopped
@@ -915,7 +915,7 @@ void quic_client_endpoint_impl::receive_cbk(
 
 void quic_client_endpoint_impl::calculate_shrink_count(const message_buffer_ptr_t& _recv_buffer,
                                                       std::size_t _recv_buffer_size) {
-                                                            VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+                                                            //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     if (buffer_shrink_threshold_) {
 
         if (_recv_buffer->capacity() != recv_buffer_size_initial_) {
@@ -1023,7 +1023,7 @@ void quic_client_endpoint_impl::print_status() {
 }
 
 std::string quic_client_endpoint_impl::get_remote_information() const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     boost::system::error_code ec;
     return remote_.address().to_string(ec) + ":"
             + std::to_string(remote_.port());

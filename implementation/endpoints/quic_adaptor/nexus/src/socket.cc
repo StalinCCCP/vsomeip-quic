@@ -105,20 +105,20 @@ void socket_impl::accept(connection_impl& c, accept_operation& op)
     // when we accepted this, we had to return nullptr for the conn ctx
     // because we didn't have this connection_impl yet. update the ctx
     auto ctx = reinterpret_cast<lsquic_conn_ctx_t*>(&c);
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
     ::lsquic_conn_set_ctx(incoming.handle, ctx);
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
     connection_state::accept_incoming(c.state, std::move(incoming));
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
     op.post(error_code{}); // success
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<":success";
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<":success";
     return;
   }
-  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+  //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
   connection_state::accept(c.state, op);
-  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+  //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
   accepting_connections.push_back(c);
-  VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
+  //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
   //op.post(error_code{});
   engine.process(lock);
 }
