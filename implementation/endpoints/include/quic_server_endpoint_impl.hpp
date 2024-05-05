@@ -141,7 +141,7 @@ private:
         nexus::quic::connection quic_conn;
         nexus::quic::stream quic_stream;
     };
-
+    std::map<int,connection::ptr> conn;
     std::mutex acceptor_mutex_;
     //boost::asio::ip::tcp::acceptor acceptor_;
     std::mutex connections_mutex_;

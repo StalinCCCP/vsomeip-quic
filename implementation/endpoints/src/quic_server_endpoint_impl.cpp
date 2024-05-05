@@ -136,11 +136,14 @@ void quic_server_endpoint_impl::start() {
     // quic_acceptor must be opened
     //if (quic_stream.is_open()) {
     VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
-    connection::ptr new_connection = connection::create(
+    
+    auto &new_connection=(
+        conn[conn.size()]=connection::create(
             std::dynamic_pointer_cast<quic_server_endpoint_impl>(
                     shared_from_this()), max_message_size_,
                     buffer_shrink_threshold_, has_enabled_magic_cookies_,
-                    io_, send_timeout_,quic_acceptor);
+                    io_, send_timeout_,quic_acceptor)
+                    );
 
     {
         std::unique_lock<std::mutex> its_socket_lock(new_connection->get_socket_lock());
