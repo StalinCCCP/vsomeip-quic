@@ -62,7 +62,7 @@ quic_client_endpoint_impl::quic_client_endpoint_impl(
       
       quic_stream(quic_conn)
        {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     is_supporting_magic_cookies_ = true;
     ssl.set_verify_mode(boost::asio::ssl::verify_peer);
     ::SSL_CTX_set_verify(ssl.native_handle(), SSL_VERIFY_NONE, NULL);
@@ -162,7 +162,7 @@ void quic_client_endpoint_impl::connect() {
     //socket_->open(remote_.protocol(), its_error);
     quic_client.connect(quic_conn, remote_, remote_address_.to_string().c_str());
 
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     //VSOMEIP_DEBUG<<"quic_client.connect complete";
     //dbg=dbg();
     if (!its_error || its_error == boost::asio::error::already_open) {
@@ -203,7 +203,7 @@ void quic_client_endpoint_impl::connect() {
 #if defined(__linux__) || defined(ANDROID) || defined(__QNX__)
         // If specified, bind to device
         std::string its_device(configuration_->get_device());
-        VSOMEIP_DEBUG<<std::string("device is ")+its_device;
+        //VSOMEIP_DEBUG<<std::string("device is ")+its_device;
         if (its_device != "") {
             //it's unknown why native_handle() is not const
             //it's unknown if it will lead the program to crash
@@ -271,7 +271,7 @@ void quic_client_endpoint_impl::connect() {
         connect_timepoint_ = std::chrono::steady_clock::now();
         aborted_restart_count_ = 0;
         //it's unknown if the stream will be established
-        VSOMEIP_DEBUG<<"Runs before quic_conn connection";
+        //VSOMEIP_DEBUG<<"Runs before quic_conn connection";
         quic_conn.async_connect(
             quic_stream,
             strand_.wrap(
@@ -282,7 +282,7 @@ void quic_client_endpoint_impl::connect() {
                 )
             )
         );
-        VSOMEIP_DEBUG<<"Runs after quic_conn connection";
+        //VSOMEIP_DEBUG<<"Runs after quic_conn connection";
         // while(1){
         //     VSOMEIP_DEBUG<<"Preventing next call";
         // }
@@ -302,7 +302,7 @@ void quic_client_endpoint_impl::connect() {
 }
 
 void quic_client_endpoint_impl::receive() {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     message_buffer_ptr_t its_recv_buffer;
     {
         std::lock_guard<std::mutex> its_lock(socket_mutex_);
@@ -317,7 +317,7 @@ void quic_client_endpoint_impl::receive() {
 void quic_client_endpoint_impl::receive(message_buffer_ptr_t  _recv_buffer,
              std::size_t _recv_buffer_size,
              std::size_t _missing_capacity) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     std::lock_guard<std::mutex> its_lock(socket_mutex_);
     if(quic_stream.is_open()) {
@@ -375,7 +375,7 @@ void quic_client_endpoint_impl::receive(message_buffer_ptr_t  _recv_buffer,
 }
 
 void quic_client_endpoint_impl::send_queued(std::pair<message_buffer_ptr_t, uint32_t> &_entry) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     const service_t its_service = VSOMEIP_BYTES_TO_WORD(
             (*_entry.first)[VSOMEIP_SERVICE_POS_MIN],
@@ -467,7 +467,7 @@ void quic_client_endpoint_impl::get_configured_times_from_endpoint(
 
 bool quic_client_endpoint_impl::get_remote_address(
         boost::asio::ip::address &_address) const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     if (remote_address_.is_unspecified()) {
         return false;
@@ -478,7 +478,7 @@ bool quic_client_endpoint_impl::get_remote_address(
 
 uint16_t quic_client_endpoint_impl::get_local_port() const {
 
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
 
     uint16_t its_port(0);
@@ -498,7 +498,7 @@ uint16_t quic_client_endpoint_impl::get_local_port() const {
 }
 
 void quic_client_endpoint_impl::set_local_port() {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     std::lock_guard<std::mutex> its_lock(socket_mutex_);
     boost::system::error_code its_error;
@@ -517,7 +517,7 @@ void quic_client_endpoint_impl::set_local_port() {
 }
 
 void quic_client_endpoint_impl::set_local_port(port_t _port) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
 
     std::lock_guard<std::mutex> its_lock(socket_mutex_);
     if (!quic_stream.is_open()) {
@@ -537,7 +537,7 @@ std::size_t quic_client_endpoint_impl::write_completion_condition(
         std::size_t _bytes_to_send, service_t _service, method_t _method,
         client_t _client, session_t _session,
         const std::chrono::steady_clock::time_point _start) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     // forced flush, should be replaced if the right we know how to make it really works
     boost::system::error_code ec;
     quic_stream.flush(ec);
@@ -591,12 +591,12 @@ std::size_t quic_client_endpoint_impl::write_completion_condition(
 }
 
 std::uint16_t quic_client_endpoint_impl::get_remote_port() const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+   //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     return remote_port_;
 }
 
 bool quic_client_endpoint_impl::is_reliable() const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
   return true;
 }
 
@@ -607,7 +607,7 @@ bool quic_client_endpoint_impl::is_magic_cookie(const message_buffer_ptr_t& _rec
 }
 
 void quic_client_endpoint_impl::send_magic_cookie(message_buffer_ptr_t &_buffer) {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     if (max_message_size_ == MESSAGE_SIZE_UNLIMITED
             || max_message_size_ - _buffer->size() >=
         VSOMEIP_SOMEIP_HEADER_SIZE + VSOMEIP_SOMEIP_MAGIC_COOKIE_SIZE) {
@@ -930,7 +930,7 @@ void quic_client_endpoint_impl::calculate_shrink_count(const message_buffer_ptr_
 
 
 std::string quic_client_endpoint_impl::get_address_port_remote() const {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::string its_address_port;
     its_address_port.reserve(21);
     boost::asio::ip::address its_address;
@@ -943,7 +943,7 @@ std::string quic_client_endpoint_impl::get_address_port_remote() const {
 }
 
 std::string quic_client_endpoint_impl::get_address_port_local() const {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::string its_address_port;
     its_address_port.reserve(21);
     boost::system::error_code ec;
@@ -962,7 +962,7 @@ void quic_client_endpoint_impl::handle_recv_buffer_exception(
         const std::exception &_e,
         const message_buffer_ptr_t& _recv_buffer,
         std::size_t _recv_buffer_size) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::stringstream its_message;
     its_message << "tcp_client_endpoint_impl::connection catched exception"
             << _e.what() << " local: " << get_address_port_local()
@@ -999,7 +999,7 @@ void quic_client_endpoint_impl::handle_recv_buffer_exception(
 }
 
 void quic_client_endpoint_impl::print_status() {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::size_t its_data_size(0);
     std::size_t its_queue_size(0);
     std::size_t its_receive_buffer_capacity(0);
@@ -1032,7 +1032,7 @@ std::string quic_client_endpoint_impl::get_remote_information() const {
 void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error,
                                         std::size_t _bytes,
                                         const message_buffer_ptr_t& _sent_msg) {
-    VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
+    //VSOMEIP_WARNING<<std::string(__PRETTY_FUNCTION__)+_error.message();
 
 
     (void)_bytes;
@@ -1118,24 +1118,24 @@ void quic_client_endpoint_impl::send_cbk(boost::system::error_code const &_error
 
 bool quic_client_endpoint_impl::tp_segmentation_enabled(service_t _service,
                                                        method_t _method) const {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     (void)_service;
     (void)_method;
     return false;
 }
 
 std::uint32_t quic_client_endpoint_impl::get_max_allowed_reconnects() const {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     return MAX_RECONNECTS_UNLIMITED;
 }
 
 void quic_client_endpoint_impl::max_allowed_reconnects_reached() {
-        VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+        //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     return;
 }
 
 void quic_client_endpoint_impl::wait_until_sent(const boost::system::error_code &_error) {
-    VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+    //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
     std::unique_lock<std::recursive_mutex> its_lock(mutex_);
     if (!is_sending_ || !_error) {
         its_lock.unlock();

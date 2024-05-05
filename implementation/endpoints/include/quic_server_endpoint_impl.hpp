@@ -158,7 +158,7 @@ private:
     class dbg{
         public:
         dbg(){
-                VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
+                //VSOMEIP_DEBUG<<__PRETTY_FUNCTION__;
         }
     } dbg;
     // nexus::quic::connection quic_conn;
