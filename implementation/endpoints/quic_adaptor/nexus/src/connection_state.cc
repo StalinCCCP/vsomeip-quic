@@ -169,7 +169,7 @@ void stream_accept(variant& state, stream_accept_operation& op, bool is_http)
     return;
   }
   stream_state::accept(op.stream.state, op);
-  op.post(error_code{});
+  //op.post(error_code{});
   o.accepting_streams.push_back(op.stream);
 }
 
