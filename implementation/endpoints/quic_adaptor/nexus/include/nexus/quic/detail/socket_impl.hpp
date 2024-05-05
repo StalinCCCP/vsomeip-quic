@@ -1,5 +1,6 @@
 #pragma once
 
+#include "vsomeip/internal/logger.hpp"
 #include <boost/intrusive/list.hpp>
 #include <boost/circular_buffer.hpp>
 #include <nexus/ssl.hpp>
@@ -75,8 +76,11 @@ struct socket_impl : boost::intrusive::list_base_hook<> {
         [this, &c] (auto h) {
           using Handler = std::decay_t<decltype(h)>;
           using op_type = accept_async<Handler, executor_type>;
+          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           auto p = handler_allocate<op_type>(h, std::move(h), get_executor());
+          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           auto op = handler_ptr<op_type, Handler>{p, &p->handler};
+          VSOMEIP_DEBUG<<__PRETTY_FUNCTION__<<__LINE__;
           accept(c, *op);
           op.release(); // release ownership
         }, token);
