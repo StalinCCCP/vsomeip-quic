@@ -155,6 +155,19 @@ quic-client-example/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/quic-client-example.dir/build.make CMakeFiles/quic-client-example.dir/build
 .PHONY : quic-client-example/fast
 
+#=============================================================================
+# Target rules for targets named client-presentation
+
+# Build rule for target.
+client-presentation: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client-presentation
+.PHONY : client-presentation
+
+# fast build rule for target.
+client-presentation/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-presentation.dir/build.make CMakeFiles/client-presentation.dir/build
+.PHONY : client-presentation/fast
+
 client-example.o: client-example.cpp.o
 .PHONY : client-example.o
 
@@ -178,6 +191,30 @@ client-example.s: client-example.cpp.s
 client-example.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-example.dir/build.make CMakeFiles/client-example.dir/client-example.cpp.s
 .PHONY : client-example.cpp.s
+
+client-presentation.o: client-presentation.cpp.o
+.PHONY : client-presentation.o
+
+# target to build an object file
+client-presentation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-presentation.dir/build.make CMakeFiles/client-presentation.dir/client-presentation.cpp.o
+.PHONY : client-presentation.cpp.o
+
+client-presentation.i: client-presentation.cpp.i
+.PHONY : client-presentation.i
+
+# target to preprocess a source file
+client-presentation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-presentation.dir/build.make CMakeFiles/client-presentation.dir/client-presentation.cpp.i
+.PHONY : client-presentation.cpp.i
+
+client-presentation.s: client-presentation.cpp.s
+.PHONY : client-presentation.s
+
+# target to generate assembly for a file
+client-presentation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client-presentation.dir/build.make CMakeFiles/client-presentation.dir/client-presentation.cpp.s
+.PHONY : client-presentation.cpp.s
 
 quic-client-example.o: quic-client-example.cpp.o
 .PHONY : quic-client-example.o
@@ -236,11 +273,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client-example"
+	@echo "... client-presentation"
 	@echo "... quic-client-example"
 	@echo "... service-example"
 	@echo "... client-example.o"
 	@echo "... client-example.i"
 	@echo "... client-example.s"
+	@echo "... client-presentation.o"
+	@echo "... client-presentation.i"
+	@echo "... client-presentation.s"
 	@echo "... quic-client-example.o"
 	@echo "... quic-client-example.i"
 	@echo "... quic-client-example.s"

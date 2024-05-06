@@ -26,6 +26,7 @@ void run() {
         request->set_method(SAMPLE_METHOD_ID);
         request->set_reliable(true);
         std::shared_ptr< vsomeip::payload > its_payload = vsomeip::runtime::get()->create_payload();
+        std::cout<<"example program running here\n";
         std::vector< vsomeip::byte_t > its_payload_data;
         for (vsomeip::byte_t i = 0; i < 100; i++) {
                 its_payload_data.push_back(i % 256);
@@ -52,10 +53,10 @@ void on_message(const std::shared_ptr<vsomeip::message>& _response) {
                         << (int)*(its_payload->get_data() + i) << " ";
         }
 
-        std::cout << "CLIENT: Received message with Client/Session ["
-                << std::setw(4) << std::setfill('0') << std::hex << _response->get_client() << "/"
-                << std::setw(4) << std::setfill('0') << std::hex << _response->get_session() << std::dec 
-                << ",delay_time:" << delay_time.count()  << "ms] " << ss.str() << std::endl;
+        // std::cout << "CLIENT: Received message with Client/Session ["
+        //         << std::setw(4) << std::setfill('0') << std::hex << _response->get_client() << "/"
+        //         << std::setw(4) << std::setfill('0') << std::hex << _response->get_session() << std::dec 
+        //         << ",delay_time:" << delay_time.count()  << "ms] " << ss.str() << std::endl;
 }
 
 void on_availability(vsomeip::service_t _service, vsomeip::instance_t _instance, bool _is_available) {
