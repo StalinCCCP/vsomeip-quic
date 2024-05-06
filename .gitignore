@@ -182,3 +182,6 @@
 **/*.log
 **/clientup.sh
 
+/usertest/CMakeFiles
+/usertest/build
+/usertest/.cache

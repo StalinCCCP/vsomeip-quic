@@ -1,5 +1,0 @@
-/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles/service-example.dir
-/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles/client-example.dir
-/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles/quic-client-example.dir
-/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles/edit_cache.dir
-/home/haswell/Projects/vsomeip-quic/usertest/build/CMakeFiles/rebuild_cache.dir
